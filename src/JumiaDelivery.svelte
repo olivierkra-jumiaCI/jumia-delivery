@@ -1,0 +1,354 @@
+<script>
+    import Map from './Map.svelte';
+</script>
+
+<svelte:head>
+    <title>Envoyez des colis à vos amis et à votre famille | Jumia Delivery Côte d'Ivoire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</svelte:head>
+
+<div class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <!-- Jumia Logo Placeholder -->
+                    <div class="text-2xl font-black tracking-tighter flex items-center">
+                        <span class="text-black">JUMIA</span>
+                        <span class="bg-jumia-orange text-white rounded-full w-6 h-6 flex items-center justify-center ml-1 text-sm">★</span>
+                    </div>
+                    <span class="text-gray-500 font-medium text-lg border-l border-gray-300 pl-2 ml-2">Livraison</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-900 font-bold border-b-2 border-jumia-orange">Personnel (C2C)</a>
+                    <a href="#" class="text-gray-500 hover:text-jumia-orange transition">Professionnel (B2C)</a>
+                    <a href="#rates" class="text-gray-500 hover:text-jumia-orange transition">Tarifs</a>
+                    <a href="#stations" class="text-gray-500 hover:text-jumia-orange transition">Points Relais</a>
+                </div>
+                <button class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold">
+                    Suivre un Colis
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <polygon points="50,0 100,0 50,100 0,100" />
+                </svg>
+
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <span class="inline-block py-1 px-3 rounded bg-orange-100 text-orange-600 text-xs font-bold tracking-wider mb-4 uppercase">Pour vous et votre famille</span>
+                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                            <span class="block xl:inline">Envoyez des colis en toute sécurité</span>
+                            <span class="block text-jumia-orange">partout en Côte d'Ivoire.</span>
+                        </h1>
+                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-auto">
+                            D'Abidjan à Bouaké, envoyez des colis à vos proches rapidement et en toute sécurité. Pas besoin de compte pro, il suffit de se présenter et d'expédier.
+                        </p>
+                        
+                        <!-- Tracking Widget -->
+                        <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                            <form class="mt-3 sm:flex shadow-lg rounded-lg overflow-hidden border border-gray-200" on:submit|preventDefault>
+                                <label for="tracking" class="sr-only">Numéro de suivi</label>
+                                <input type="text" name="tracking" id="tracking" class="block w-full py-4 px-4 text-gray-900 placeholder-gray-500 focus:outline-none" placeholder="Entrez votre numéro de suivi (ex. JB-123456)">
+                                <button type="submit" class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium bg-gray-800 text-white shadow-sm hover:bg-gray-900 focus:outline-none sm:mt-0 sm:w-auto">
+                                    Suivre
+                                </button>
+                            </form>
+                            <p class="mt-2 text-xs text-gray-400">Suivez la localisation en temps réel via notre application ou site web.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-orange-50 flex items-center justify-center">
+            <!-- Illustration placeholder -->
+            <div class="relative w-full h-64 sm:h-72 md:h-96 lg:h-full flex items-center justify-center text-orange-200">
+                <svg class="w-1/2 h-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+                </svg>
+                <div class="absolute inset-0 bg-gradient-to-r from-white to-transparent lg:via-white/20"></div>
+                <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Person receiving package" class="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply">
+            </div>
+        </div>
+    </div>
+
+    <!-- Value Props -->
+    <div class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-orange-50 rounded-xl border border-orange-100">
+                    <div class="w-12 h-12 bg-orange-100 text-jumia-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Livraison Express</h3>
+                    <p class="mt-2 text-gray-600">Livraison rapide et fiable à Abidjan et dans d'autres grandes villes (1-2 jours ouvrables).</p>
+                </div>
+                <div class="p-6 bg-orange-50 rounded-xl border border-orange-100">
+                    <div class="w-12 h-12 bg-orange-100 text-jumia-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Tarifs Abordables</h3>
+                    <p class="mt-2 text-gray-600">Tarifs à partir de seulement <span class="font-bold text-jumia-orange">1 000 FCFA</span>. Tarification transparente sans frais cachés.</p>
+                </div>
+                <div class="p-6 bg-orange-50 rounded-xl border border-orange-100">
+                    <div class="w-12 h-12 bg-orange-100 text-jumia-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Couverture Nationale</h3>
+                    <p class="mt-2 text-gray-600">Plus de 283 Points Relais dans plus de 100 villes. Nous livrons dans toutes les régions de Côte d'Ivoire.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="bg-gray-900 py-16 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold tracking-tight">Comment Expédier un Colis</h2>
+                <p class="mt-4 text-gray-400">Envoyer de l'amour est aussi simple que 1-2-3-4</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="relative">
+                    <div class="absolute top-0 left-0 -ml-4 -mt-4 text-6xl font-black text-gray-800 opacity-50">1</div>
+                    <h4 class="text-xl font-bold mb-2 text-jumia-orange relative z-10">Se Présenter</h4>
+                    <p class="text-gray-300">Visitez votre point Jumia le plus proche. Nous avons des centres à Cocody, Yopougon, Marcory, et plus encore.</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute top-0 left-0 -ml-4 -mt-4 text-6xl font-black text-gray-800 opacity-50">2</div>
+                    <h4 class="text-xl font-bold mb-2 text-jumia-orange relative z-10">Enregistrer et Payer</h4>
+                    <p class="text-gray-300">Remettez votre article. Notre agent le pèsera et acceptera le paiement des frais d'expédition.</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute top-0 left-0 -ml-4 -mt-4 text-6xl font-black text-gray-800 opacity-50">3</div>
+                    <h4 class="text-xl font-bold mb-2 text-jumia-orange relative z-10">Alertes Instantanées</h4>
+                    <p class="text-gray-300">Vous et le destinataire recevez immédiatement un SMS/E-mail avec les informations de suivi.</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute top-0 left-0 -ml-4 -mt-4 text-6xl font-black text-gray-800 opacity-50">4</div>
+                    <h4 class="text-xl font-bold mb-2 text-jumia-orange relative z-10">Retrait</h4>
+                    <p class="text-gray-300">Le destinataire récupère le colis à son point relais le plus proche une fois arrivé.</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                 <a href="#stations" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-100">
+                    Trouver le Point Relais le Plus Proche
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div id="rates" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-10">Tarification Transparente</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-8 bg-blue-50">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Tailles de Colis</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-white rounded border border-gray-200 flex items-center justify-center font-bold text-gray-400 text-xs">Petit</div>
+                                <div class="ml-4">
+                                    <p class="font-bold text-gray-900">Petit Colis (0-5kg)</p>
+                                    <p class="text-sm text-gray-500">Env. 60x40x20 cm. Téléphones, chemises, livres.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-white rounded border border-gray-200 flex items-center justify-center font-bold text-gray-400 text-xs">Moyen</div>
+                                <div class="ml-4">
+                                    <p class="font-bold text-gray-900">Colis Moyen (5-15kg)</p>
+                                    <p class="text-sm text-gray-500">Env. 80x60x40 cm. Mixeurs, chaussures, ordinateurs portables.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-20 h-20 bg-white rounded border border-gray-200 flex items-center justify-center font-bold text-gray-400 text-xs">Grand</div>
+                                <div class="ml-4">
+                                    <p class="font-bold text-gray-900">Grand Colis (15-35kg)</p>
+                                    <p class="text-sm text-gray-500">Env. 140x80x60 cm. Micro-ondes, articles volumineux.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Trajets Populaires (Petit Colis)</h3>
+                        <table class="w-full text-sm text-left">
+                            <thead class="text-xs text-gray-500 uppercase border-b">
+                                <tr>
+                                    <th class="py-2">Trajet</th>
+                                    <th class="py-2">Délai</th>
+                                    <th class="py-2 text-right">Prix</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr>
+                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Abidjan</td>
+                                    <td class="py-3 text-gray-500">1-2 Jours</td>
+                                    <td class="py-3 text-right font-bold text-jumia-orange">1 000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Yamoussoukro</td>
+                                    <td class="py-3 text-gray-500">2-4 Jours</td>
+                                    <td class="py-3 text-right font-bold text-jumia-orange">1 500 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Bouaké</td>
+                                    <td class="py-3 text-gray-500">3-5 Jours</td>
+                                    <td class="py-3 text-right font-bold text-jumia-orange">2 000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-medium text-gray-900">Bouaké <span class="text-gray-400">→</span> San Pedro</td>
+                                    <td class="py-3 text-gray-500">5-7 Jours</td>
+                                    <td class="py-3 text-right font-bold text-jumia-orange">3 000 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Korhogo</td>
+                                    <td class="py-3 text-gray-500">6-8 Jours</td>
+                                    <td class="py-3 text-right font-bold text-jumia-orange">2 500 FCFA</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-4 pt-4 border-t border-gray-100 text-center">
+                            <a href="#" class="text-jumia-orange font-bold text-sm hover:underline">Voir la grille tarifaire complète →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stations / Network -->
+    <div id="stations" class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Nous Sommes Partout Où Vous Êtes</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto mb-10">Avec plus de 283 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
+            
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Abidjan</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Yamoussoukro</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Bouaké</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">San Pedro</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Daloa</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Korhogo</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">+100 Autres Villes</span>
+            </div>
+
+            <div class="bg-white p-2 rounded-xl shadow-sm inline-block w-full max-w-4xl h-64 md:h-96 relative overflow-hidden">
+                <!-- Interactive Leaflet Map -->
+                <Map />
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="max-w-3xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Foire Aux Questions</h2>
+        <div class="space-y-4">
+            <details class="group bg-white rounded-lg shadow-sm border border-gray-200">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
+                    <span>Quels articles puis-je envoyer ?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 mt-0 group-open:animate-fadeIn p-4 pt-0 text-sm">
+                    Vous pouvez envoyer la plupart des marchandises générales, y compris vêtements, chaussures, livres, petits appareils électroménagers (mixeurs) et denrées non périssables. Nous ne transportons pas d'espèces, de bétail, de produits frais ou de matières dangereuses.
+                </div>
+            </details>
+            <details class="group bg-white rounded-lg shadow-sm border border-gray-200">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
+                    <span>Que faire si mon colis est perdu ou endommagé ?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 mt-0 group-open:animate-fadeIn p-4 pt-0 text-sm">
+                    Nous offrons une compensation standard de 2x les frais d'expédition. Pour les objets de valeur, nous recommandons d'ajouter la Protection Premium qui couvre jusqu'à 500 000 FCFA de valeur.
+                </div>
+            </details>
+            <details class="group bg-white rounded-lg shadow-sm border border-gray-200">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
+                    <span>Comment dois-je emballer mon article ?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 mt-0 group-open:animate-fadeIn p-4 pt-0 text-sm">
+                    Les articles doivent être solidement emballés pour résister au transport. Les agences Jumia peuvent refuser les articles jugés fragiles s'ils ne sont pas correctement protégés.
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="bg-jumia-orange">
+        <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                <span class="block">Prêt à envoyer un colis ?</span>
+                <span class="block text-orange-900 text-2xl mt-2 opacity-80">Trouvez un point relais près de chez vous aujourd'hui.</span>
+            </h2>
+            <a href="#" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-jumia-orange bg-white hover:bg-gray-50 sm:w-auto">
+                Localiser un Point Relais
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">À propos de Jumia Delivery</h3>
+                <p class="text-sm leading-relaxed">Le premier service de courrier de Côte d'Ivoire. Logistique rapide, fiable et abordable pour tous.</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Aide</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">Centre d'Aide</a></li>
+                    <li><a href="#" class="hover:text-white">Nous Contacter</a></li>
+                    <li><a href="#" class="hover:text-white">Résolution des Litiges</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Légal</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">Conditions Générales</a></li>
+                    <li><a href="#" class="hover:text-white">Avis de Confidentialité</a></li>
+                    <li><a href="#" class="hover:text-white">Avis sur les Cookies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Suivez-nous</h3>
+                <div class="flex space-x-4">
+                   <!-- Social Icons Placeholder -->
+                   <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
+                   <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
+                   <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
+                </div>
+                <p class="text-xs mt-4">© 2025 Jumia. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<style>
+    /* Global font handling since we can't easily set body font outside component scope */
+    :global(body) {
+        font-family: 'Roboto', sans-serif;
+    }
+    .jumia-orange { color: #F68B1E; }
+    .bg-jumia-orange { background-color: #F68B1E; }
+    .jumia-black { color: #282828; }
+    .hero-pattern {
+        background-color: #f3f4f6;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+</style>
