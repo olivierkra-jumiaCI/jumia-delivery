@@ -1,10 +1,10 @@
 <script>
     import Map from './Map.svelte';
+    import heroImage from './assets/hero.png';
 </script>
 
 <svelte:head>
     <title>Envoyez des colis à vos amis et à votre famille | Jumia Delivery Côte d'Ivoire</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </svelte:head>
 
@@ -75,7 +75,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
                 </svg>
                 <div class="absolute inset-0 bg-gradient-to-r from-white to-transparent lg:via-white/20"></div>
-                <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Person receiving package" class="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply">
+                <img src={heroImage} alt="Person receiving package" class="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply">
             </div>
         </div>
     </div>
@@ -159,22 +159,22 @@
                             <div class="flex items-center">
                                 <div class="w-12 h-12 bg-white rounded border border-gray-200 flex items-center justify-center font-bold text-gray-400 text-xs">Petit</div>
                                 <div class="ml-4">
-                                    <p class="font-bold text-gray-900">Petit Colis (0-5kg)</p>
-                                    <p class="text-sm text-gray-500">Env. 60x40x20 cm. Téléphones, chemises, livres.</p>
+                                    <p class="font-bold text-gray-900">Petit Colis (40×20×13 cm)</p>
+                                    <p class="text-sm text-gray-500">Téléphones, chemises, livres, etc.</p>
                                 </div>
                             </div>
                             <div class="flex items-center">
                                 <div class="w-16 h-16 bg-white rounded border border-gray-200 flex items-center justify-center font-bold text-gray-400 text-xs">Moyen</div>
                                 <div class="ml-4">
-                                    <p class="font-bold text-gray-900">Colis Moyen (5-15kg)</p>
-                                    <p class="text-sm text-gray-500">Env. 80x60x40 cm. Mixeurs, chaussures, ordinateurs portables.</p>
+                                    <p class="font-bold text-gray-900">Colis Moyen (70×30×20 cm)</p>
+                                    <p class="text-sm text-gray-500">Mixeurs, chaussures, ordinateurs portables.</p>
                                 </div>
                             </div>
                             <div class="flex items-center">
                                 <div class="w-20 h-20 bg-white rounded border border-gray-200 flex items-center justify-center font-bold text-gray-400 text-xs">Grand</div>
                                 <div class="ml-4">
-                                    <p class="font-bold text-gray-900">Grand Colis (15-35kg)</p>
-                                    <p class="text-sm text-gray-500">Env. 140x80x60 cm. Micro-ondes, articles volumineux.</p>
+                                    <p class="font-bold text-gray-900">Grand Colis (100×100×62 cm)</p>
+                                    <p class="text-sm text-gray-500">Micro-ondes, articles volumineux.</p>
                                 </div>
                             </div>
                         </div>
@@ -191,28 +191,28 @@
                             </thead>
                             <tbody class="divide-y divide-gray-100">
                                 <tr>
-                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Abidjan</td>
-                                    <td class="py-3 text-gray-500">1-2 Jours</td>
+                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Abidjan (Zone 1)</td>
+                                    <td class="py-3 text-gray-500">J+2</td>
+                                    <td class="py-3 text-right font-bold text-jumia-orange">750 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Yamoussoukro (Zone 2)</td>
+                                    <td class="py-3 text-gray-500">J+3</td>
+                                    <td class="py-3 text-right font-bold text-jumia-orange">900 FCFA</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Bouaké (Zone 3)</td>
+                                    <td class="py-3 text-gray-500">J+4</td>
                                     <td class="py-3 text-right font-bold text-jumia-orange">1 000 FCFA</td>
                                 </tr>
                                 <tr>
-                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Yamoussoukro</td>
-                                    <td class="py-3 text-gray-500">2-4 Jours</td>
-                                    <td class="py-3 text-right font-bold text-jumia-orange">1 500 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Bouaké</td>
-                                    <td class="py-3 text-gray-500">3-5 Jours</td>
-                                    <td class="py-3 text-right font-bold text-jumia-orange">2 000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 font-medium text-gray-900">Bouaké <span class="text-gray-400">→</span> San Pedro</td>
-                                    <td class="py-3 text-gray-500">5-7 Jours</td>
+                                    <td class="py-3 font-medium text-gray-900">Bouaké <span class="text-gray-400">→</span> San Pedro (Zone 7)</td>
+                                    <td class="py-3 text-gray-500">J+7</td>
                                     <td class="py-3 text-right font-bold text-jumia-orange">3 000 FCFA</td>
                                 </tr>
                                 <tr>
-                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Korhogo</td>
-                                    <td class="py-3 text-gray-500">6-8 Jours</td>
+                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Korhogo (Zone 7)</td>
+                                    <td class="py-3 text-gray-500">J+5</td>
                                     <td class="py-3 text-right font-bold text-jumia-orange">2 500 FCFA</td>
                                 </tr>
                             </tbody>
@@ -340,10 +340,6 @@
 </div>
 
 <style>
-    /* Global font handling since we can't easily set body font outside component scope */
-    :global(body) {
-        font-family: 'Roboto', sans-serif;
-    }
     .jumia-orange { color: #F68B1E; }
     .bg-jumia-orange { background-color: #F68B1E; }
     .jumia-black { color: #282828; }
