@@ -27,10 +27,9 @@
                     <button on:click={() => onNavigate('personal')} class="text-gray-500 hover:text-jumia-orange transition bg-transparent">Personnel (C2C)</button>
                     <button on:click={() => onNavigate('business')} class="text-gray-900 font-bold border-b-2 border-jumia-orange bg-transparent">Professionnel (B2C)</button>
                     <a href="#features" class="text-gray-500 hover:text-jumia-orange transition flex items-center">Fonctionnalités</a>
-                    <a href="#integration" class="text-gray-500 hover:text-jumia-orange transition flex items-center">API & Intégration</a>
+                    <a href="#stations" class="text-gray-500 hover:text-jumia-orange transition flex items-center">Nos agences</a>
                 </div>
                 <div class="flex items-center gap-4">
-                     <a href="#" class="text-sm font-medium text-gray-600 hover:text-jumia-orange">Connexion</a>
                     <button class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold">
                         Commencer
                     </button>
