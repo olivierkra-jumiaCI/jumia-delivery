@@ -13,8 +13,8 @@
     let submitted = false;
     let error = null;
 
-    // Live Google Apps Script Web App URL
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkVdNkzzyEhdHr5JrEx_hCrL2-GLXX5M2gdt1WS87LXeoaG9IZxr2EX-gZbKuaNNFP/exec'; 
+    // New Robust Google Apps Script Web App URL
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzkc8z-QO6lSPP7JOGiGQfNrNsVCqS_vWvRFImVtPjYVRPxNs2Hem2PATTefHtxYsZy/exec'; 
 
     async function handleSubmit() {
         submitting = true;
@@ -40,19 +40,20 @@
         }
 
         // Prepare data for submission with cleaned phone number
-        const submissionData = {
-            ...formData,
-            phone: '+225 ' + cleanPhone // Send standardized format to sheet
-        };
+        const submissionData = new URLSearchParams();
+        submissionData.append('company', formData.company);
+        submissionData.append('email', formData.email);
+        submissionData.append('phone', '+225 ' + cleanPhone);
+        submissionData.append('volume', formData.volume);
         
         try {
             const response = await fetch(SCRIPT_URL, {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: JSON.stringify(submissionData)
+                body: submissionData.toString()
             });
 
             submitted = true;
