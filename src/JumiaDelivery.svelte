@@ -6,11 +6,13 @@
 
     let showFullRates = false;
     let tarifs = [];
+    let zoneVilles = [];
 
     onMount(() => {
         Papa.parse("https://docs.google.com/spreadsheets/d/1M52gDOvkoXZtCA7RSmHM1vy4ksO6H5fdQQ-twAkRqKk/export?format=csv&gid=178217986", {
             download: true,
             header: true,
+            skipEmptyLines: true,
             complete: function(results) {
                 tarifs = results.data.filter(row => row['Départ']).map(row => ({
                     depart: row['Départ'],
@@ -19,6 +21,11 @@
                     moyen: row['Moyen (70×30×20 cm)'],
                     grand: row['Grand (100×100×62 cm)'],
                     delai: row['Délai de livraison estimé (en jours ouvrés)']
+                }));
+
+                zoneVilles = results.data.filter(row => row['Zones']).map(row => ({
+                    zone: row['Zones'],
+                    villes: row['Villes & Localités']
                 }));
             }
         });
@@ -202,6 +209,19 @@
                                     <p class="font-bold text-gray-900">Grand Colis (100×100×62 cm)</p>
                                     <p class="text-sm text-gray-500">Micro-ondes, articles volumineux.</p>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Zone & Villes Section -->
+                        <div class="mt-8 pt-6 border-t border-blue-100">
+                            <h3 class="text-lg font-bold text-gray-800 mb-4">Zones & Localités</h3>
+                            <div class="space-y-3 max-h-[250px] overflow-y-auto pr-2 custom-scrollbar">
+                                {#each zoneVilles as item}
+                                    <div class="bg-white p-3 rounded-lg border border-blue-50 shadow-sm">
+                                        <p class="font-bold text-jumia-orange text-sm mb-1">{item.zone}</p>
+                                        <p class="text-xs text-gray-500 leading-relaxed">{item.villes}</p>
+                                    </div>
+                                {/each}
                             </div>
                         </div>
                     </div>
