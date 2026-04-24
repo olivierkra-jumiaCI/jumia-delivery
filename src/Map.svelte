@@ -44,7 +44,7 @@
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        Papa.parse("https://docs.google.com/spreadsheets/d/1Ewhe3rHqmtsbtIe2bZMUbmrb-O7P6RVy82n8VJZxUO8/export?format=csv&gid=775461967", {
+        Papa.parse("https://docs.google.com/spreadsheets/d/1M52gDOvkoXZtCA7RSmHM1vy4ksO6H5fdQQ-twAkRqKk/export?format=csv&gid=0", {
             download: true,
             header: true,
             complete: function(results) {
@@ -119,8 +119,11 @@
         
         {#if selectedStation}
             <div class="p-6 bg-white border-t border-gray-100 shadow-2xl z-20">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">{selectedStation.pus}</h3>
-                <p class="text-sm text-gray-600 mb-4">{selectedStation.adresse}</p>
+                <h3 class="text-xl font-bold text-gray-900 mb-1">{selectedStation.pus}</h3>
+                <p class="text-sm text-gray-600 mb-1">{selectedStation.adresse}</p>
+                {#if selectedStation.repere}
+                    <p class="text-xs text-gray-500 mb-4 italic"><span class="font-bold not-italic">Repère:</span> {selectedStation.repere}</p>
+                {/if}
                 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-gray-500">
                     <div class="flex items-center gap-2">
