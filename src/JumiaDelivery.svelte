@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import Map from './Map.svelte';
-    import heroImage from './assets/hero.png';
+    import heroImage from './assets/hero.jpg';
     import Papa from 'papaparse';
 
     let showFullRates = false;
@@ -115,7 +115,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
                 </svg>
                 <div class="absolute inset-0 bg-gradient-to-r from-white to-transparent lg:via-white/20"></div>
-                <img src={heroImage} alt="Person receiving package" class="absolute inset-0 w-full h-full object-cover opacity-90 mix-blend-multiply">
+                <img src={heroImage} alt="Agent Jumia remettant un colis" class="absolute inset-0 w-full h-full object-cover">
             </div>
         </div>
     </div>
