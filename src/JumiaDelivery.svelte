@@ -256,7 +256,7 @@
                 <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">+100 Autres Villes</span>
             </div>
 
-            <div class="bg-white p-2 rounded-xl shadow-sm inline-block w-full max-w-4xl h-64 md:h-96 relative overflow-hidden">
+            <div class="bg-white p-1 rounded-2xl shadow-2xl w-full max-w-6xl h-[600px] mx-auto relative overflow-hidden border border-gray-100 text-left">
                 <!-- Interactive Leaflet Map -->
                 <Map />
             </div>
