@@ -540,7 +540,21 @@
                     </tbody>
                 </table>
             </div>
-            <div class="p-6 border-t bg-gray-50 text-right rounded-b-lg">
+
+            <!-- Zones & Villes List -->
+            <div class="p-6 border-t bg-gray-50 flex-shrink-0">
+                <h4 class="text-lg font-bold text-gray-900 mb-4">Zones & Localités</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-y-auto max-h-[300px] pr-2 custom-scrollbar">
+                    {#each zoneVilles as item}
+                        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                            <p class="font-bold text-jumia-orange mb-1">{item.zone}</p>
+                            <p class="text-xs text-gray-600 leading-relaxed">{item.villes}</p>
+                        </div>
+                    {/each}
+                </div>
+            </div>
+
+            <div class="p-6 border-t bg-white text-right rounded-b-lg">
                 <button on:click={toggleRates} class="bg-gray-800 text-white px-5 py-2 rounded shadow hover:bg-gray-900 transition font-bold">Fermer</button>
             </div>
         </div>
@@ -554,5 +568,19 @@
     .hero-pattern {
         background-color: #f3f4f6;
         background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #F68B1E;
+        border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #d47619;
     }
 </style>
