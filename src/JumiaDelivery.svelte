@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    export let onNavigate;
     import Map from './Map.svelte';
     import heroImage from './assets/hero.jpg';
     import logo from './assets/logo.png';
@@ -59,10 +60,10 @@
                     <span class="text-white font-medium text-lg border-l border-gray-700 pl-2 ml-2">Livraison</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-white font-bold border-b-2 border-jumia-orange">Personnel (C2C)</a>
-                    <a href="#" class="text-gray-300 hover:text-jumia-orange transition">Professionnel (B2C)</a>
-                    <a href="#rates" class="text-gray-300 hover:text-jumia-orange transition">Tarifs</a>
-                    <a href="#stations" class="text-gray-300 hover:text-jumia-orange transition">Points Relais</a>
+                    <button on:click={() => onNavigate('personal')} class="text-white font-bold border-b-2 border-jumia-orange bg-transparent">Personnel (C2C)</button>
+                    <button on:click={() => onNavigate('business')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Professionnel (B2C)</button>
+                    <a href="#rates" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Tarifs</a>
+                    <a href="#stations" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Points Relais</a>
                 </div>
                 <button class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold">
                     Suivre un Colis
