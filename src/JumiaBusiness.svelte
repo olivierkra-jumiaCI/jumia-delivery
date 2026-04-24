@@ -43,7 +43,7 @@
         const submissionData = new URLSearchParams();
         submissionData.append('company', formData.company);
         submissionData.append('email', formData.email);
-        submissionData.append('phone', '+225 ' + cleanPhone);
+        submissionData.append('phone', "'+225" + cleanPhone);
         submissionData.append('volume', formData.volume);
         
         try {
