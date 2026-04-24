@@ -47,8 +47,10 @@
         Papa.parse("https://docs.google.com/spreadsheets/d/1M52gDOvkoXZtCA7RSmHM1vy4ksO6H5fdQQ-twAkRqKk/export?format=csv&gid=0", {
             download: true,
             header: true,
+            skipEmptyLines: true,
             complete: function(results) {
-                stations = results.data.filter(s => s.longlat);
+                console.log("Stations data fetched:", results.data.length, "rows");
+                stations = results.data.filter(s => s.longlat && s.pus);
                 stations.forEach(station => {
                     const parts = station.longlat.split(',');
                     const lat = parseFloat(parts[0].replace(/['"]/g, '').trim());
