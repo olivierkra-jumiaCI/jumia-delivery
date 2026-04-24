@@ -1,9 +1,29 @@
 <script>
+    import { onMount } from 'svelte';
     import Map from './Map.svelte';
     import heroImage from './assets/hero.png';
-    import tarifs from './lib/data/tarifs.json';
+    import Papa from 'papaparse';
 
     let showFullRates = false;
+    let tarifs = [];
+
+    onMount(() => {
+        Papa.parse("https://docs.google.com/spreadsheets/d/1M52gDOvkoXZtCA7RSmHM1vy4ksO6H5fdQQ-twAkRqKk/export?format=csv&gid=178217986", {
+            download: true,
+            header: true,
+            complete: function(results) {
+                tarifs = results.data.filter(row => row['Départ']).map(row => ({
+                    depart: row['Départ'],
+                    arrivee: row['Arrivée'],
+                    petit: row['Petit (40×20×13 cm)'],
+                    moyen: row['Moyen (70×30×20 cm)'],
+                    grand: row['Grand (100×100×62 cm)'],
+                    delai: row['Délai de livraison estimé (en jours ouvrés)']
+                }));
+            }
+        });
+    });
+
     function toggleRates() {
         showFullRates = !showFullRates;
     }
@@ -196,31 +216,19 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-100">
-                                <tr>
-                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Abidjan (Zone 1)</td>
-                                    <td class="py-3 text-gray-500">J+2</td>
-                                    <td class="py-3 text-right font-bold text-jumia-orange">750 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Yamoussoukro (Zone 2)</td>
-                                    <td class="py-3 text-gray-500">J+3</td>
-                                    <td class="py-3 text-right font-bold text-jumia-orange">900 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Bouaké (Zone 3)</td>
-                                    <td class="py-3 text-gray-500">J+4</td>
-                                    <td class="py-3 text-right font-bold text-jumia-orange">1 000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 font-medium text-gray-900">Bouaké <span class="text-gray-400">→</span> San Pedro (Zone 7)</td>
-                                    <td class="py-3 text-gray-500">J+7</td>
-                                    <td class="py-3 text-right font-bold text-jumia-orange">3 000 FCFA</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 font-medium text-gray-900">Abidjan <span class="text-gray-400">→</span> Korhogo (Zone 7)</td>
-                                    <td class="py-3 text-gray-500">J+5</td>
-                                    <td class="py-3 text-right font-bold text-jumia-orange">2 500 FCFA</td>
-                                </tr>
+                                {#if tarifs.length > 0}
+                                    {#each tarifs.slice(0, 5) as tarif}
+                                        <tr>
+                                            <td class="py-3 font-medium text-gray-900">{tarif.depart} <span class="text-gray-400">→</span> {tarif.arrivee}</td>
+                                            <td class="py-3 text-gray-500">{tarif.delai}</td>
+                                            <td class="py-3 text-right font-bold text-jumia-orange">{tarif.petit} FCFA</td>
+                                        </tr>
+                                    {/each}
+                                {:else}
+                                    <tr>
+                                        <td colspan="3" class="py-10 text-center text-gray-400">Chargement des tarifs...</td>
+                                    </tr>
+                                {/if}
                             </tbody>
                         </table>
                         <div class="mt-4 pt-4 border-t border-gray-100 text-center">
