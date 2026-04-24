@@ -294,6 +294,104 @@
         </div>
     </div>
 
+    <!-- Conditions & Rules Section -->
+    <div class="bg-white py-16 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Conditions et Règles d'Expédition</h2>
+            
+            <div class="space-y-12 text-gray-700 leading-relaxed">
+                <!-- A -->
+                <section>
+                    <h3 class="text-xl font-bold text-jumia-orange mb-4">A- Conditions et modalités de confiscation des colis retournés</h3>
+                    <p>
+                        Le destinataire dispose de 05 jours pour récupérer son colis à la PUS de destination. En cas de non-récupération, le colis sera retourné à la PUS d'origine où il restera disponible pour un retrait par l'expéditeur pendant un délai de 05 jours supplémentaires. Si l'expéditeur ne récupère pas le colis dans ce délai, celui-ci sera transféré vers notre <span class="font-bold">entrepôt de dépôt à Koumassi (all VRTC)</span> et conservé pendant une période maximale de 21 jours. Au terme de cette période, tout colis non réclamé sera considéré comme abandonné et deviendra la propriété de Jumia avec <span class="font-bold">un transfert à notre entrepôt final sis à pk24</span>. Veuillez consulter le point 4 des conditions générales d'utilisation pour plus d'informations.
+                    </p>
+                </section>
+
+                <!-- B -->
+                <section>
+                    <h3 class="text-xl font-bold text-jumia-orange mb-4">B- Règles d'expédition</h3>
+                    <p class="mb-4">Les points relais Jumia peuvent refuser les articles jugés fragiles ou mal emballés ainsi que tous les colis volumineux.</p>
+                    <p class="mb-4">Les articles interdits comprennent les matériaux dangereux, les animaux (vivants ou morts), l'argent liquide, les drogues et les armes à feu, etc.</p>
+                    <p class="text-orange-600 font-medium italic">Important : Aucune indemnisation ne sera fournie pour les envois interdits, et l'expéditeur pourra être tenu responsable.</p>
+                </section>
+
+                <!-- C -->
+                <section>
+                    <h3 class="text-xl font-bold text-jumia-orange mb-4">C- Règles de livraison</h3>
+                    <p class="mb-4">Lors de la livraison au destinataire, l'agent en point relais Jumia procède ainsi :</p>
+                    <ol class="list-decimal ml-6 space-y-2">
+                        <li>Confirmer le numéro de suivi,</li>
+                        <li>Vérifier l'identité du récupérant avec une pièce d'identité légale et valide,</li>
+                        <li>Enregistrer les date, signature, numéro des pièce d'identité et téléphone,</li>
+                        <li>Remettre le colis après les vérifications, garantissant sécurité et traçabilité.</li>
+                    </ol>
+                </section>
+
+                <!-- D -->
+                <section>
+                    <h3 class="text-xl font-bold text-jumia-orange mb-4">D- Politique de remboursement</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">1. Assurance Supplémentaire (Protection Premium)</h4>
+                            <p>
+                                En souscrivant à l'option <span class="font-bold">Protection Premium</span> pour votre envoi, et après règlement des frais additionnels correspondants (conformément aux articles 5.7 et 6.10 de nos Conditions Générales d'Utilisation), vous bénéficiez d'une <span class="font-bold">couverture renforcée à 100%</span> en cas de perte du colis.
+                            </p>
+                            <p class="mt-2">
+                                Dans ce cadre, Jumia vous indemnisera à hauteur de la valeur la plus basse entre la valeur déclarée du colis et sa valeur actuelle sur la plateforme Jumia.
+                            </p>
+                            <p class="mt-2">
+                                En cas de dommage constaté sur un colis retourné au point relais Jumia de dépôt, vous pourrez prétendre à une <span class="font-bold">indemnisation allant jusqu'à 75%</span> de la valeur de l'article, calculée sur la base de sa valeur de reconstitution ou de remplacement.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">2. Colis sans Protection Premium</h4>
+                            <p>
+                                Pour les envois ne bénéficiant pas de la Protection Premium, l'indemnisation en cas de perte, de dommage ou de retour à l'expéditeur est limitée à <span class="font-bold">deux fois (2x) le montant des frais de livraison</span>.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">3. Limite d'Indemnisation</h4>
+                            <p>
+                                Quelle que soit la nature de l'envoi (avec ou sans Protection Premium), le plafond d'indemnisation pour un colis individuel est fixé à <span class="font-bold">400 000 FCFA</span> (quatre cent mille francs CFA).
+                            </p>
+                            <p class="mt-2">
+                                Jumia se réserve le droit de modifier ce plafond à sa discrétion, sous réserve de notification préalable, conformément à nos Conditions Générales d'Utilisation.
+                            </p>
+                        </div>
+
+                        <p class="font-bold">NB : Pour toute réclamation, n'hésitez pas à contacter notre service client.</p>
+                    </div>
+                </section>
+
+                <!-- E -->
+                <section class="bg-orange-50 p-6 rounded-xl border border-orange-100">
+                    <h3 class="text-xl font-bold text-jumia-orange mb-4">E- Message de licence et contact service client</h3>
+                    <p class="mb-4 italic">Opérateur agréé pour l'expédition des services postaux nationaux par l'ARTCI.</p>
+                    <p class="mb-4">Pour toute réclamation, veuillez appeler le service client :</p>
+                    <ul class="space-y-2 font-bold">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            25 20 00 61 61
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            07 00 88 60 43
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            05 95 63 77 40
+                        </li>
+                    </ul>
+                    <a href="#" class="inline-block mt-6 text-jumia-orange font-bold hover:underline">Voir nos conditions Générales d'utilisation →</a>
+                </section>
+            </div>
+        </div>
+    </div>
+
     <!-- FAQ -->
     <div class="max-w-3xl mx-auto px-4 py-16">
         <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Foire Aux Questions</h2>
