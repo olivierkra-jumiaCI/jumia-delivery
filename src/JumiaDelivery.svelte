@@ -1,6 +1,12 @@
 <script>
     import Map from './Map.svelte';
     import heroImage from './assets/hero.png';
+    import tarifs from './lib/data/tarifs.json';
+
+    let showFullRates = false;
+    function toggleRates() {
+        showFullRates = !showFullRates;
+    }
 </script>
 
 <svelte:head>
@@ -218,7 +224,7 @@
                             </tbody>
                         </table>
                         <div class="mt-4 pt-4 border-t border-gray-100 text-center">
-                            <a href="#" class="text-jumia-orange font-bold text-sm hover:underline">Voir la grille tarifaire complète →</a>
+                            <button on:click|preventDefault={toggleRates} class="text-jumia-orange font-bold text-sm hover:underline cursor-pointer bg-transparent border-none p-0">Voir la grille tarifaire complète →</button>
                         </div>
                     </div>
                 </div>
@@ -338,6 +344,48 @@
         </div>
     </footer>
 </div>
+
+{#if showFullRates}
+    <div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-50 transition-opacity">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h3 class="text-2xl font-bold text-gray-900">Grille Tarifaire Complète</h3>
+                <button on:click={toggleRates} class="text-gray-400 hover:text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="p-0 overflow-y-auto">
+                <table class="w-full text-sm text-left">
+                    <thead class="text-xs text-gray-500 uppercase border-b bg-gray-50 sticky top-0">
+                        <tr>
+                            <th class="py-3 px-4">Départ</th>
+                            <th class="py-3 px-4">Arrivée</th>
+                            <th class="py-3 px-4">Petit Colis</th>
+                            <th class="py-3 px-4">Colis Moyen</th>
+                            <th class="py-3 px-4">Grand Colis</th>
+                            <th class="py-3 px-4">Délai Estimé</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        {#each tarifs as tarif}
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-3 px-4 font-medium text-gray-900">{tarif.depart}</td>
+                                <td class="py-3 px-4 font-medium text-gray-900">{tarif.arrivee}</td>
+                                <td class="py-3 px-4 text-gray-600 font-bold text-jumia-orange">{tarif.petit} FCFA</td>
+                                <td class="py-3 px-4 text-gray-600 font-bold text-jumia-orange">{tarif.moyen} FCFA</td>
+                                <td class="py-3 px-4 text-gray-600 font-bold text-jumia-orange">{tarif.grand} FCFA</td>
+                                <td class="py-3 px-4 text-gray-500">{tarif.delai}</td>
+                            </tr>
+                        {/each}
+                    </tbody>
+                </table>
+            </div>
+            <div class="p-6 border-t bg-gray-50 text-right rounded-b-lg">
+                <button on:click={toggleRates} class="bg-gray-800 text-white px-5 py-2 rounded shadow hover:bg-gray-900 transition font-bold">Fermer</button>
+            </div>
+        </div>
+    </div>
+{/if}
 
 <style>
     .jumia-orange { color: #F68B1E; }
