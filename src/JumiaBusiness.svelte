@@ -2,6 +2,44 @@
     import logo from './assets/logo.png';
     import Map from './Map.svelte';
     export let onNavigate;
+
+    let formData = {
+        company: '',
+        email: '',
+        phone: '',
+        volume: ''
+    };
+    let submitting = false;
+    let submitted = false;
+    let error = null;
+
+    // Live Google Apps Script Web App URL
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkVdNkzzyEhdHr5JrEx_hCrL2-GLXX5M2gdt1WS87LXeoaG9IZxr2EX-gZbKuaNNFP/exec'; 
+
+    async function handleSubmit() {
+        submitting = true;
+        error = null;
+        
+        try {
+            // Using a simple fetch to a Google Apps Script Web App
+            // Note: This requires the Google Apps Script to be set up as a Web App with 'Anyone' access
+            const response = await fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Google Apps Script requires no-cors for simple posts
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            submitted = true;
+        } catch (e) {
+            console.error('Submission error:', e);
+            error = "Une erreur est survenue. Veuillez réessayer.";
+        } finally {
+            submitting = false;
+        }
+    }
 </script>
 
 <svelte:head>
@@ -77,42 +115,63 @@
                 <div class="mt-12 lg:mt-0 lg:col-span-5">
                     <div class="bg-white sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden shadow-2xl">
                         <div class="px-4 py-8 sm:px-10">
-                            <div class="text-center mb-6">
-                                <h3 class="text-xl font-bold text-gray-900">Ouvrez un compte Business</h3>
-                                <p class="text-sm text-gray-500">Inscrivez-vous pour voir les tarifs spéciaux.</p>
-                            </div>
-                            <form action="#" method="POST" class="space-y-4" on:submit|preventDefault>
-                                <div>
-                                    <label for="company-name" class="sr-only">Nom de l'entreprise</label>
-                                    <input type="text" name="company-name" id="company-name" placeholder="Nom de votre Boutique / Entreprise" class="block w-full px-4 py-3 border border-gray-300 rounded-md placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-jumia-orange focus:border-transparent">
+                            {#if submitted}
+                                <div class="text-center py-12 animate-fadeIn">
+                                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-900">Demande Envoyée !</h3>
+                                    <p class="text-sm text-gray-500 mt-2">Merci pour votre intérêt. Un conseiller Jumia vous contactera très prochainement.</p>
+                                    <button on:click={() => submitted = false} class="mt-6 text-jumia-orange font-bold text-sm hover:underline">Envoyer une autre demande</button>
                                 </div>
-                                <div>
-                                    <label for="email" class="sr-only">Email professionnel</label>
-                                    <input type="email" name="email" id="email" placeholder="Adresse Email" class="block w-full px-4 py-3 border border-gray-300 rounded-md placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-jumia-orange focus:border-transparent">
+                            {:else}
+                                <div class="text-center mb-6">
+                                    <h3 class="text-xl font-bold text-gray-900">Ouvrez un compte Business</h3>
+                                    <p class="text-sm text-gray-500">Inscrivez-vous pour voir les tarifs spéciaux.</p>
                                 </div>
-                                <div>
-                                    <label for="phone" class="sr-only">Numéro de téléphone</label>
-                                    <input type="tel" name="phone" id="phone" placeholder="Numéro de téléphone" class="block w-full px-4 py-3 border border-gray-300 rounded-md placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-jumia-orange focus:border-transparent">
-                                </div>
-                                <div>
-                                    <label for="volume" class="sr-only">Volume mensuel</label>
-                                    <select id="volume" name="volume" class="block w-full px-4 py-3 border border-gray-300 rounded-md text-gray-500 focus:outline-none focus:ring-2 focus:ring-jumia-orange focus:border-transparent">
-                                        <option value="" disabled selected>Volume mensuel estimé</option>
-                                        <option value="0-50">0 - 50 colis</option>
-                                        <option value="51-200">51 - 200 colis</option>
-                                        <option value="201-1000">201 - 1,000 colis</option>
-                                        <option value="1000+">1,000+ colis</option>
-                                    </select>
-                                </div>
-                                <div class="pt-2">
-                                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-jumia-orange hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jumia-orange transition">
-                                        Demander un compte
-                                    </button>
-                                </div>
-                                <p class="text-xs text-center text-gray-400 mt-2">
-                                    En cliquant sur Demander un compte, vous acceptez nos Conditions de Service.
-                                </p>
-                            </form>
+                                <form action="#" method="POST" class="space-y-4" on:submit|preventDefault={handleSubmit}>
+                                    <div>
+                                        <label for="company-name" class="sr-only">Nom de l'entreprise</label>
+                                        <input type="text" bind:value={formData.company} name="company-name" id="company-name" placeholder="Nom de votre Boutique / Entreprise" class="block w-full px-4 py-3 border border-gray-300 rounded-md placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-jumia-orange focus:border-transparent" required>
+                                    </div>
+                                    <div>
+                                        <label for="email" class="sr-only">Email professionnel</label>
+                                        <input type="email" bind:value={formData.email} name="email" id="email" placeholder="Adresse Email" class="block w-full px-4 py-3 border border-gray-300 rounded-md placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-jumia-orange focus:border-transparent" required>
+                                    </div>
+                                    <div>
+                                        <label for="phone" class="sr-only">Numéro de téléphone</label>
+                                        <input type="tel" bind:value={formData.phone} name="phone" id="phone" placeholder="Numéro de téléphone" class="block w-full px-4 py-3 border border-gray-300 rounded-md placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-jumia-orange focus:border-transparent" required>
+                                    </div>
+                                    <div>
+                                        <label for="volume" class="sr-only">Volume mensuel</label>
+                                        <select id="volume" bind:value={formData.volume} name="volume" class="block w-full px-4 py-3 border border-gray-300 rounded-md text-gray-500 focus:outline-none focus:ring-2 focus:ring-jumia-orange focus:border-transparent" required>
+                                            <option value="" disabled selected>Volume mensuel estimé</option>
+                                            <option value="0-50">0 - 50 colis</option>
+                                            <option value="51-200">51 - 200 colis</option>
+                                            <option value="201-1000">201 - 1,000 colis</option>
+                                            <option value="1000+">1,000+ colis</option>
+                                        </select>
+                                    </div>
+                                    
+                                    {#if error}
+                                        <p class="text-red-500 text-xs text-center">{error}</p>
+                                    {/if}
+
+                                    <div class="pt-2">
+                                        <button type="submit" disabled={submitting} class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-jumia-orange hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jumia-orange transition disabled:opacity-50">
+                                            {#if submitting}
+                                                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                                Envoi en cours...
+                                            {:else}
+                                                Demander un compte
+                                            {/if}
+                                        </button>
+                                    </div>
+                                    <p class="text-xs text-center text-gray-400 mt-2">
+                                        En cliquant sur Demander un compte, vous acceptez nos Conditions de Service.
+                                    </p>
+                                </form>
+                            {/if}
                         </div>
                     </div>
                 </div>
