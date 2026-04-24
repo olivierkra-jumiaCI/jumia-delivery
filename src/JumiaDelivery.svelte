@@ -514,9 +514,9 @@
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
-            <div class="p-0 overflow-y-auto">
+            <div class="flex-1 overflow-y-auto custom-scrollbar">
                 <table class="w-full text-sm text-left">
-                    <thead class="text-xs text-gray-500 uppercase border-b bg-gray-50 sticky top-0">
+                    <thead class="text-xs text-gray-500 uppercase border-b bg-gray-50 sticky top-0 z-10">
                         <tr>
                             <th class="py-3 px-4">Départ</th>
                             <th class="py-3 px-4">Arrivée</th>
@@ -539,22 +539,22 @@
                         {/each}
                     </tbody>
                 </table>
-            </div>
 
-            <!-- Zones & Villes List -->
-            <div class="p-6 border-t bg-gray-50 flex-shrink-0">
-                <h4 class="text-lg font-bold text-gray-900 mb-4">Zones & Localités</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-y-auto max-h-[300px] pr-2 custom-scrollbar">
-                    {#each zoneVilles as item}
-                        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
-                            <p class="font-bold text-jumia-orange mb-1">{item.zone}</p>
-                            <p class="text-xs text-gray-600 leading-relaxed">{item.villes}</p>
-                        </div>
-                    {/each}
+                <!-- Zones & Villes List -->
+                <div class="p-8 border-t bg-gray-50">
+                    <h4 class="text-xl font-bold text-gray-900 mb-6">Zones & Localités</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {#each zoneVilles as item}
+                            <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                                <p class="font-bold text-jumia-orange mb-2 text-base">{item.zone}</p>
+                                <p class="text-sm text-gray-600 leading-relaxed">{item.villes}</p>
+                            </div>
+                        {/each}
+                    </div>
                 </div>
             </div>
 
-            <div class="p-6 border-t bg-white text-right rounded-b-lg">
+            <div class="p-6 border-t bg-white text-right rounded-b-lg flex-shrink-0">
                 <button on:click={toggleRates} class="bg-gray-800 text-white px-5 py-2 rounded shadow hover:bg-gray-900 transition font-bold">Fermer</button>
             </div>
         </div>
