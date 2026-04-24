@@ -1,5 +1,6 @@
 <script>
     import logo from './assets/logo.png';
+    import Map from './Map.svelte';
     export let onNavigate;
 </script>
 
@@ -200,51 +201,25 @@
         </div>
     </div>
 
-    <!-- Integration Section -->
-    <div id="integration" class="bg-gray-900 py-16 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2">
-                <span class="text-jumia-orange font-bold uppercase tracking-wide text-sm">Pour les Développeurs</span>
-                <h2 class="text-3xl font-extrabold mt-2 mb-4">Intégration API Transparente</h2>
-                <p class="text-gray-300 text-lg mb-6">
-                    Connectez votre boutique en ligne directement à Jumia Delivery. Automatisez la création de commandes, récupérez les tarifs et les mises à jour de suivi sans quitter votre système.
-                </p>
-                <ul class="space-y-3 mb-8">
-                    <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span>Architecture API RESTful</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span>Webhooks pour les statuts de livraison</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span>Environnement Sandbox pour les tests</span>
-                    </li>
-                </ul>
-                <a href="#" class="text-white border border-gray-600 px-6 py-3 rounded hover:bg-gray-800 transition inline-block">Voir la Documentation API</a>
+    <!-- Stations / Network -->
+    <div id="stations" class="bg-gray-50 py-16 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Nous Sommes Partout Où Vous Êtes</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto mb-10">Avec plus de 283 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
+            
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Abidjan</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Yamoussoukro</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Bouaké</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">San Pedro</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Daloa</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Korhogo</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">+100 Autres Villes</span>
             </div>
-            <div class="md:w-1/2 bg-gray-800 rounded-lg p-6 font-mono text-sm text-green-400 shadow-2xl border border-gray-700 w-full overflow-hidden">
-                <div class="flex gap-2 mb-4 border-b border-gray-700 pb-2">
-                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <p class="text-gray-500"># Créer un envoi via API</p>
-                <p><span class="text-purple-400">POST</span> /api/v1/shipments</p>
-                <p>{"{"}</p>
-                <p class="pl-4">"recipient": {"{"}</p>
-                <p class="pl-8">"name": "Jean Koffi",</p>
-                <p class="pl-8">"phone": "+225...",</p>
-                <p class="pl-8">"city": "Abidjan"</p>
-                <p class="pl-4">{"}"},</p>
-                <p class="pl-4">"package": {"{"}</p>
-                <p class="pl-8">"weight": 2.5,</p>
-                <p class="pl-8">"cod_amount": 15000</p>
-                <p class="pl-4">{"}"}</p>
-                <p>{"}"}</p>
-                <p class="mt-4 text-white">Status: <span class="text-green-400">201 Created</span></p>
+
+            <div class="bg-white p-1 rounded-2xl shadow-2xl w-full max-w-6xl h-[600px] mx-auto relative overflow-hidden border border-gray-100 text-left">
+                <!-- Interactive Leaflet Map -->
+                <Map />
             </div>
         </div>
     </div>
