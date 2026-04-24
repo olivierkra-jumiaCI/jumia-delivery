@@ -7,6 +7,7 @@
     let showFullRates = false;
     let tarifs = [];
     let zoneVilles = [];
+    let zoneToCity = {};
 
     onMount(() => {
         Papa.parse("https://docs.google.com/spreadsheets/d/1M52gDOvkoXZtCA7RSmHM1vy4ksO6H5fdQQ-twAkRqKk/export?format=csv&gid=178217986", {
@@ -27,6 +28,12 @@
                     zone: row['Zones'],
                     villes: row['Villes & Localités']
                 }));
+
+                // Create a mapping of Zone -> Representative City
+                zoneVilles.forEach(item => {
+                    const firstCity = item.villes.split('-')[0].trim();
+                    zoneToCity[item.zone] = firstCity;
+                });
             }
         });
     });
@@ -239,7 +246,11 @@
                                 {#if tarifs.length > 0}
                                     {#each tarifs.slice(0, 5) as tarif}
                                         <tr>
-                                            <td class="py-3 font-medium text-gray-900">{tarif.depart} <span class="text-gray-400">→</span> {tarif.arrivee}</td>
+                                            <td class="py-3 font-medium text-gray-900">
+                                                {zoneToCity[tarif.depart] || ''} <span class="text-xs text-gray-400 font-normal">({tarif.depart})</span> 
+                                                <span class="text-gray-400 mx-1">→</span> 
+                                                {zoneToCity[tarif.arrivee] || ''} <span class="text-xs text-gray-400 font-normal">({tarif.arrivee})</span>
+                                            </td>
                                             <td class="py-3 text-gray-500">{tarif.delai}</td>
                                             <td class="py-3 text-right font-bold text-jumia-orange">{tarif.petit} FCFA</td>
                                         </tr>
