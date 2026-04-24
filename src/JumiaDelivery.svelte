@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import Map from './Map.svelte';
     import heroImage from './assets/hero.jpg';
+    import logo from './assets/logo.png';
     import Papa from 'papaparse';
 
     let showFullRates = false;
@@ -50,22 +51,18 @@
 
 <div class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-gray-900 shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-2">
-                    <!-- Jumia Logo Placeholder -->
-                    <div class="text-2xl font-black tracking-tighter flex items-center">
-                        <span class="text-black">JUMIA</span>
-                        <span class="bg-jumia-orange text-white rounded-full w-6 h-6 flex items-center justify-center ml-1 text-sm">★</span>
-                    </div>
-                    <span class="text-gray-500 font-medium text-lg border-l border-gray-300 pl-2 ml-2">Livraison</span>
+                    <img src={logo} alt="Jumia Logo" class="h-8 w-auto">
+                    <span class="text-white font-medium text-lg border-l border-gray-700 pl-2 ml-2">Livraison</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-900 font-bold border-b-2 border-jumia-orange">Personnel (C2C)</a>
-                    <a href="#" class="text-gray-500 hover:text-jumia-orange transition">Professionnel (B2C)</a>
-                    <a href="#rates" class="text-gray-500 hover:text-jumia-orange transition">Tarifs</a>
-                    <a href="#stations" class="text-gray-500 hover:text-jumia-orange transition">Points Relais</a>
+                    <a href="#" class="text-white font-bold border-b-2 border-jumia-orange">Personnel (C2C)</a>
+                    <a href="#" class="text-gray-300 hover:text-jumia-orange transition">Professionnel (B2C)</a>
+                    <a href="#rates" class="text-gray-300 hover:text-jumia-orange transition">Tarifs</a>
+                    <a href="#stations" class="text-gray-300 hover:text-jumia-orange transition">Points Relais</a>
                 </div>
                 <button class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold">
                     Suivre un Colis
