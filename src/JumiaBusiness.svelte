@@ -20,16 +20,39 @@
         submitting = true;
         error = null;
         
+        // 1. Clean phone number: remove spaces and non-digit characters (except +)
+        let cleanPhone = formData.phone.replace(/\s+/g, '');
+        
+        // 2. Handle prefix +225 or 225
+        if (cleanPhone.startsWith('+225')) {
+            cleanPhone = cleanPhone.substring(4);
+        } else if (cleanPhone.startsWith('225')) {
+            cleanPhone = cleanPhone.substring(3);
+        }
+
+        // 3. Validate format: 10 digits starting with 01, 05, or 07
+        const phoneRegex = /^(01|05|07)\d{8}$/;
+        
+        if (!phoneRegex.test(cleanPhone)) {
+            error = "Numéro invalide. Format requis : 10 chiffres commençant par 01, 05 ou 07.";
+            submitting = false;
+            return;
+        }
+
+        // Prepare data for submission with cleaned phone number
+        const submissionData = {
+            ...formData,
+            phone: '+225 ' + cleanPhone // Send standardized format to sheet
+        };
+        
         try {
-            // Using a simple fetch to a Google Apps Script Web App
-            // Note: This requires the Google Apps Script to be set up as a Web App with 'Anyone' access
             const response = await fetch(SCRIPT_URL, {
                 method: 'POST',
-                mode: 'no-cors', // Google Apps Script requires no-cors for simple posts
+                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(submissionData)
             });
 
             submitted = true;
@@ -140,7 +163,7 @@
                                     </div>
                                     <div>
                                         <label for="phone" class="sr-only">Numéro de téléphone</label>
-                                        <input type="tel" bind:value={formData.phone} name="phone" id="phone" placeholder="Numéro de téléphone" class="block w-full px-4 py-3 border border-gray-300 rounded-md placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-jumia-orange focus:border-transparent" required>
+                                        <input type="tel" bind:value={formData.phone} name="phone" id="phone" placeholder="Numéro de téléphone (ex: 07 09 13 89 07)" class="block w-full px-4 py-3 border border-gray-300 rounded-md placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-jumia-orange focus:border-transparent" required>
                                     </div>
                                     <div>
                                         <label for="volume" class="sr-only">Volume mensuel</label>
