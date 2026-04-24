@@ -562,7 +562,7 @@
 {/if}
 
 <style>
-    .jumia-orange { color: #F68B1E; }
+    .jumia-orange, .text-jumia-orange { color: #F68B1E; }
     .bg-jumia-orange { background-color: #F68B1E; }
     .jumia-black { color: #282828; }
     .hero-pattern {
