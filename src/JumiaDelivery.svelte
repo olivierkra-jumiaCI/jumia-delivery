@@ -300,6 +300,29 @@
         <div class="space-y-4">
             <details class="group bg-white rounded-lg shadow-sm border border-gray-200">
                 <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
+                    <span>Comment suivre mon colis ?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 mt-0 group-open:animate-fadeIn p-4 pt-0 text-sm">
+                    C'est très simple ! Cliquez sur le lien de suivi que nous vous avons envoyé par SMS ou par email juste après l'enregistrement de votre colis.
+                </div>
+            </details>
+            <details class="group bg-white rounded-lg shadow-sm border border-gray-200">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
+                    <span>Quels sont les tarifs et les méthodes de paiement ?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 mt-0 group-open:animate-fadeIn p-4 pt-0 text-sm">
+                    <p class="mb-2"><strong>Calcul des tarifs :</strong> Les tarifs sont calculés en fonction de la taille du colis (S, M, ou L) et de la destination (ville/pays).</p>
+                    <p><strong>Moyens de paiement :</strong> Vous pouvez régler vos frais d'expédition directement dans nos agences, soit en espèces, soit via mobile money.</p>
+                </div>
+            </details>
+            <details class="group bg-white rounded-lg shadow-sm border border-gray-200">
+                <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-4">
                     <span>Quels articles puis-je envoyer ?</span>
                     <span class="transition group-open:rotate-180">
                         <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
