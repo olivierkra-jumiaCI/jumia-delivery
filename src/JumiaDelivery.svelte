@@ -74,7 +74,7 @@
                     <span class="text-white font-medium text-lg border-l border-gray-700 pl-2 ml-2">Livraison</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <button on:click={() => onNavigate('personal')} class="text-white font-bold border-b-2 border-jumia-orange bg-transparent">Personnel (C2C)</button>
+                    <button on:click={() => onNavigate('personal')} class="text-white font-bold border-b-2 border-jumia-orange bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => onNavigate('business')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Professionnel (B2C)</button>
                     <a href="#rates" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Tarifs</a>
                     <a href="#stations" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Points Relais</a>
@@ -102,7 +102,7 @@
         {#if showMobileMenu}
             <div class="md:hidden bg-gray-800 border-t border-gray-700 py-4 px-4 space-y-4 animate-fadeIn">
                 <div class="flex flex-col space-y-3">
-                    <button on:click={() => handleMobileNavigate('personal')} class="text-left text-white font-bold py-2 bg-transparent">Personnel (C2C)</button>
+                    <button on:click={() => handleMobileNavigate('personal')} class="text-left text-white font-bold py-2 bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => handleMobileNavigate('business')} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Professionnel (B2C)</button>
                     <a href="#rates" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Tarifs</a>
                     <a href="#stations" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Points Relais</a>
@@ -130,14 +130,16 @@
                             <span class="block text-jumia-orange">partout en Côte d'Ivoire.</span>
                         </h1>
                         <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-auto">
-                            D'Abidjan à Bouaké, envoyez des colis à vos proches rapidement et en toute sécurité. Pas besoin de compte pro, il suffit de se présenter et d'expédier.
+                            Vous avez une expédition à faire ? <br class="hidden md:block">
+                            Rendez-vous dans l’agence Jumia la plus proche et profitez d’un service rapide et fiable avec Jumia Delivery.<br>
+                            <span class="font-bold text-jumia-orange">Jumia Delivery le meilleur service de livraison et d'expédition de colis en Côte d'Ivoire</span>
                         </p>
                         
                         <!-- Tracking Widget -->
                         <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                             <form class="mt-3 sm:flex shadow-lg rounded-lg overflow-hidden border border-gray-200" on:submit|preventDefault>
                                 <label for="tracking" class="sr-only">Numéro de suivi</label>
-                                <input type="text" name="tracking" id="tracking" class="block w-full py-4 px-4 text-gray-900 placeholder-gray-500 focus:outline-none" placeholder="Entrez votre numéro de suivi (ex. JB-123456)">
+                                <input type="text" name="tracking" id="tracking" class="block w-full py-4 px-4 text-gray-900 placeholder-gray-500 focus:outline-none" placeholder="Entrez votre numéro de suivi (ex. JPD-DAB-6531511489)">
                                 <button type="submit" class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium bg-gray-800 text-white shadow-sm hover:bg-gray-900 focus:outline-none sm:mt-0 sm:w-auto">
                                     Suivre
                                 </button>
@@ -232,6 +234,24 @@
                     <p class="text-gray-700 text-lg leading-relaxed">
                         <span class="font-black text-2xl text-gray-900 mr-2">4-</span> Suivre en temps réel la localisation de votre colis grâce à notre <span class="text-jumia-orange font-bold">Application de suivi.</span>
                     </p>
+                </div>
+            </div>
+
+            <div class="mt-10 max-w-4xl mx-auto">
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-2xl">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <svg class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="text-sm text-blue-800 space-y-3">
+                            <p class="font-bold">Un SMS sera envoyé à chaque étape, que ce soit pour la livraison ou le retour du colis.</p>
+                            <p class="text-blue-700 leading-relaxed">
+                                <span class="font-bold">NB:</span> Les frais de livraison sont à la charge de l'expéditeur et doivent être réglés lors du dépôt en point relais Jumia. Les frais de livraison ne sont pas remboursables une fois le colis créé, sauf en cas de dommage ou de perte avérée.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
