@@ -186,38 +186,48 @@
     </div>
 
     <!-- How It Works -->
-    <div class="bg-gray-900 py-16 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold tracking-tight">Comment Expédier un Colis</h2>
-                <p class="mt-4 text-gray-400">Envoyer de l'amour est aussi simple que 1-2-3-4</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="relative">
-                    <div class="absolute top-0 left-0 -ml-4 -mt-4 text-6xl font-black text-gray-800 opacity-50">1</div>
-                    <h4 class="text-xl font-bold mb-2 text-jumia-orange relative z-10">Se Présenter</h4>
-                    <p class="text-gray-300">Visitez votre point Jumia le plus proche. Nous avons des centres à Cocody, Yopougon, Marcory, et plus encore.</p>
+    <div class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 border border-gray-100 rounded-3xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                <!-- Step 1 -->
+                <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition">
+                    <div class="w-24 h-24 flex-shrink-0 bg-orange-50 rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="/icons.svg#shop" alt="Point Relais" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        <span class="font-black text-2xl text-gray-900 mr-2">1-</span> Se rendre dans le point relais JUMIA le plus proche. (Plus de 191 agences dans plus de 123 villes).
+                    </p>
                 </div>
-                <div class="relative">
-                    <div class="absolute top-0 left-0 -ml-4 -mt-4 text-6xl font-black text-gray-800 opacity-50">2</div>
-                    <h4 class="text-xl font-bold mb-2 text-jumia-orange relative z-10">Enregistrer et Payer</h4>
-                    <p class="text-gray-300">Remettez votre article. Notre agent le pèsera et acceptera le paiement des frais d'expédition.</p>
+
+                <!-- Step 2 -->
+                <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition">
+                    <div class="w-24 h-24 flex-shrink-0 bg-orange-50 rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="/icons.svg#package" alt="Colis" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        <span class="font-black text-2xl text-gray-900 mr-2">2-</span> Faire enregistrer son colis et régler les frais d'expédition auprès de l'agent en point relais Jumia.
+                    </p>
                 </div>
-                <div class="relative">
-                    <div class="absolute top-0 left-0 -ml-4 -mt-4 text-6xl font-black text-gray-800 opacity-50">3</div>
-                    <h4 class="text-xl font-bold mb-2 text-jumia-orange relative z-10">Alertes Instantanées</h4>
-                    <p class="text-gray-300">Vous et le destinataire recevez immédiatement un SMS/E-mail avec les informations de suivi.</p>
+
+                <!-- Step 3 -->
+                <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition border-t border-gray-100 md:border-t-0">
+                    <div class="w-24 h-24 flex-shrink-0 bg-orange-50 rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="/icons.svg#alerts" alt="Alertes" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        <span class="font-black text-2xl text-gray-900 mr-2">3-</span> Les informations d'expéditions sont automatiquement transmises par sms et ou e-mail aux expéditeur et destinataire.
+                    </p>
                 </div>
-                <div class="relative">
-                    <div class="absolute top-0 left-0 -ml-4 -mt-4 text-6xl font-black text-gray-800 opacity-50">4</div>
-                    <h4 class="text-xl font-bold mb-2 text-jumia-orange relative z-10">Retrait</h4>
-                    <p class="text-gray-300">Le destinataire récupère le colis à son point relais le plus proche une fois arrivé.</p>
+
+                <!-- Step 4 -->
+                <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition border-t border-gray-100">
+                    <div class="w-24 h-24 flex-shrink-0 bg-orange-50 rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="/icons.svg#tracking" alt="Suivi" class="w-16 h-16 object-contain">
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        <span class="font-black text-2xl text-gray-900 mr-2">4-</span> Suivre en temps réel la localisation de votre colis grâce à notre <span class="text-jumia-orange font-bold">Application de suivi.</span>
+                    </p>
                 </div>
-            </div>
-            <div class="mt-12 text-center">
-                 <a href="#stations" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-100">
-                    Trouver le Point Relais le Plus Proche
-                </a>
             </div>
         </div>
     </div>
