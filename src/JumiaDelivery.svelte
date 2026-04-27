@@ -547,9 +547,6 @@
                 <span class="block">Prêt à envoyer un colis ?</span>
                 <span class="block text-orange-900 text-2xl mt-2 opacity-80">Trouvez un point relais près de chez vous aujourd'hui.</span>
             </h2>
-            <a href="#points-relais" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-jumia-orange bg-white hover:bg-gray-50 sm:w-auto">
-                Localiser un Point Relais
-            </a>
         </div>
     </div>
 </div>
