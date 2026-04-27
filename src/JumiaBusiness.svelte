@@ -363,6 +363,43 @@
     </div>
 
 
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-left">
+                <div class="col-span-1 md:col-span-2">
+                    <img src={logo} alt="Jumia Logo" class="h-12 mb-6 grayscale brightness-200">
+                    <p class="text-gray-400 max-w-md leading-relaxed">
+                        Jumia Delivery Espace Vendeur : la solution logistique complète pour booster vos ventes en ligne avec le réseau numéro 1 en Côte d'Ivoire.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Navigation</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="#features" class="hover:text-jumia-orange transition">Fonctionnalités</a></li>
+                        <li><a href="#points-relais" class="hover:text-jumia-orange transition">Points Relais</a></li>
+                        <li><button on:click={() => onNavigate('personal')} class="hover:text-jumia-orange transition bg-transparent p-0 text-left border-none cursor-pointer">Espace Particulier</button></li>
+                        <li><a href="https://packagetracker-services.jumia.com/#/" target="_blank" class="hover:text-jumia-orange transition">Suivre un colis</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-jumia-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            25 20 00 61 61
+                        </li>
+                        <li>
+                            <a href="https://www.jumia.ci/sp-termes-conditions-jumia-delivery/" target="_blank" class="text-sm hover:text-jumia-orange underline">Termes & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <p>&copy; {new Date().getFullYear()} Jumia Delivery Côte d'Ivoire. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
 </div>
 
 <style>
