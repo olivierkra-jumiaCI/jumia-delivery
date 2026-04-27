@@ -97,8 +97,8 @@
                     <a href="#stations" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Nos agences</a>
                 </div>
                 <div class="flex items-center md:hidden">
-                    <button on:click={toggleMobileMenu} class="text-gray-300 hover:text-white focus:outline-none bg-transparent flex items-center gap-2 px-2 py-1 rounded border border-gray-700">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <button on:click={toggleMobileMenu} class="text-gray-300 hover:text-white focus:outline-none bg-transparent">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             {#if showMobileMenu}
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             {:else}
