@@ -318,7 +318,7 @@
     <div id="points-relais" class="bg-gray-50 py-16 border-t border-gray-100 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Points Relais & Zones d'Expédition</h2>
-            <p class="text-gray-500 max-w-2xl mx-auto mb-10">Optimisez votre logistique avec notre vaste réseau de plus de 123 agences stratégiquement situées.</p>
+            <p class="text-gray-500 max-w-2xl mx-auto mb-10">Avec plus de 123 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
             
             <div class="flex flex-wrap justify-center gap-3 mb-10">
                 <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Abidjan</span>
@@ -331,15 +331,6 @@
             <div class="bg-white p-1 rounded-2xl shadow-2xl w-full max-w-6xl h-[600px] mx-auto relative overflow-hidden border border-gray-100 text-left">
                 <!-- Interactive Leaflet Map -->
                 <Map />
-            </div>
-
-            <div class="mt-8">
-                <button 
-                    on:click={() => onNavigate('agencies')} 
-                    class="text-jumia-orange font-bold hover:underline bg-transparent"
-                >
-                    Ouvrir en plein écran →
-                </button>
             </div>
         </div>
     </div>
