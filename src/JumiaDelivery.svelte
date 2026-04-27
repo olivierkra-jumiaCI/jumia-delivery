@@ -133,7 +133,7 @@
                         <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                             <form class="mt-3 sm:flex shadow-lg rounded-lg overflow-hidden border border-gray-200" on:submit|preventDefault>
                                 <label for="tracking" class="sr-only">Numéro de suivi</label>
-                                <input type="text" name="tracking" id="tracking" class="block w-full py-4 px-4 text-gray-900 placeholder-gray-500 focus:outline-none" placeholder="Entrez votre numéro de suivi (ex. JB-123456)">
+                                <input type="text" name="tracking" id="tracking" class="block w-full py-4 px-4 text-gray-900 placeholder-gray-500 focus:outline-none" placeholder="Entrez votre numéro de suivi (ex. JPD-DAB-6531511489)">
                                 <button type="submit" class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium bg-gray-800 text-white shadow-sm hover:bg-gray-900 focus:outline-none sm:mt-0 sm:w-auto">
                                     Suivre
                                 </button>
