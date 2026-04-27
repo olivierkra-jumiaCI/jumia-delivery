@@ -188,6 +188,7 @@
     <!-- How It Works -->
     <div class="bg-white py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Comment faire expédier un colis ?</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 border border-gray-100 rounded-3xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-gray-100">
                 <!-- Step 1 -->
                 <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition">
