@@ -12,6 +12,16 @@
     let submitting = false;
     let submitted = false;
     let error = null;
+    let showMobileMenu = false;
+
+    function toggleMobileMenu() {
+        showMobileMenu = !showMobileMenu;
+    }
+
+    function handleMobileNavigate(view) {
+        onNavigate(view);
+        showMobileMenu = false;
+    }
 
     // New Robust Google Apps Script Web App URL
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzkc8z-QO6lSPP7JOGiGQfNrNsVCqS_vWvRFImVtPjYVRPxNs2Hem2PATTefHtxYsZy/exec'; 
@@ -86,13 +96,39 @@
                     <a href="#features" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Fonctionnalités</a>
                     <a href="#stations" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Nos agences</a>
                 </div>
-                <div class="flex items-center gap-4">
+                <div class="flex items-center md:hidden">
+                    <button on:click={toggleMobileMenu} class="text-gray-300 hover:text-white focus:outline-none bg-transparent">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            {#if showMobileMenu}
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            {:else}
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            {/if}
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden md:flex items-center gap-4">
                     <button class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold">
                         Commencer
                     </button>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Menu -->
+        {#if showMobileMenu}
+            <div class="md:hidden bg-gray-800 border-t border-gray-700 py-4 px-4 space-y-4 animate-fadeIn">
+                <div class="flex flex-col space-y-3">
+                    <button on:click={() => handleMobileNavigate('personal')} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Personnel (C2C)</button>
+                    <button on:click={() => handleMobileNavigate('business')} class="text-left text-white font-bold py-2 bg-transparent">Professionnel (B2C)</button>
+                    <a href="#features" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Fonctionnalités</a>
+                    <a href="#stations" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Nos agences</a>
+                </div>
+                <button class="w-full bg-jumia-orange text-white px-5 py-3 rounded shadow font-bold text-center">
+                    Commencer
+                </button>
+            </div>
+        {/if}
     </nav>
 
     <!-- Hero Section with Form -->

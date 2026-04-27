@@ -1,6 +1,16 @@
 <script>
     import { onMount } from 'svelte';
     export let onNavigate;
+    let showMobileMenu = false;
+
+    function toggleMobileMenu() {
+        showMobileMenu = !showMobileMenu;
+    }
+
+    function handleMobileNavigate(view) {
+        onNavigate(view);
+        showMobileMenu = false;
+    }
     import Map from './Map.svelte';
     import heroImage from './assets/hero.jpg';
     import logo from './assets/logo.png';
@@ -64,12 +74,39 @@
                     <button on:click={() => onNavigate('business')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Professionnel (B2C)</button>
                     <a href="#rates" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Tarifs</a>
                     <a href="#stations" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Points Relais</a>
+                <div class="flex items-center md:hidden">
+                    <button on:click={toggleMobileMenu} class="text-gray-300 hover:text-white focus:outline-none bg-transparent">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            {#if showMobileMenu}
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            {:else}
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            {/if}
+                        </svg>
+                    </button>
                 </div>
-                <button class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold">
+                <div class="hidden md:flex items-center">
+                    <button class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold">
+                        Suivre un Colis
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        {#if showMobileMenu}
+            <div class="md:hidden bg-gray-800 border-t border-gray-700 py-4 px-4 space-y-4 animate-fadeIn">
+                <div class="flex flex-col space-y-3">
+                    <button on:click={() => handleMobileNavigate('personal')} class="text-left text-white font-bold py-2 bg-transparent">Personnel (C2C)</button>
+                    <button on:click={() => handleMobileNavigate('business')} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Professionnel (B2C)</button>
+                    <a href="#rates" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Tarifs</a>
+                    <a href="#stations" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Points Relais</a>
+                </div>
+                <button class="w-full bg-jumia-orange text-white px-5 py-3 rounded shadow font-bold text-center">
                     Suivre un Colis
                 </button>
             </div>
-        </div>
+        {/if}
     </nav>
 
     <!-- Hero Section -->
