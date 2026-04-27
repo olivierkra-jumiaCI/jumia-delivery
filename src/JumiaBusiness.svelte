@@ -93,7 +93,7 @@
                 <div class="hidden md:flex space-x-8">
                     <button on:click={() => onNavigate('personal')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => onNavigate('business')} class="text-white font-bold border-b-2 border-jumia-orange bg-transparent">Professionnel (B2C)</button>
-                    <a href="#features" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Fonctionnalités</a>
+                    <button on:click={() => onNavigate('rates')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent p-0">Tarifs</button>
                     <a href="#points-relais" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Points Relais</a>
                 </div>
                 <div class="flex items-center md:hidden">
@@ -121,7 +121,7 @@
                 <div class="flex flex-col space-y-3">
                     <button on:click={() => handleMobileNavigate('personal')} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => handleMobileNavigate('business')} class="text-left text-white font-bold py-2 bg-transparent">Professionnel (B2C)</button>
-                    <a href="#features" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Fonctionnalités</a>
+                    <button on:click={() => { onNavigate('rates'); showMobileMenu = false; }} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Tarifs</button>
                     <a href="#points-relais" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Points Relais</a>
                 </div>
                 <button class="w-full bg-jumia-orange text-white px-5 py-3 rounded shadow font-bold text-center">

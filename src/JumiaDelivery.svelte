@@ -27,7 +27,6 @@
     import step3 from './assets/step-3.png';
     import step4 from './assets/step-4.png';
 
-    let showFullRates = false;
     let tarifs = [];
     let zoneVilles = [];
     let zoneToCity = {};
@@ -61,9 +60,7 @@
         });
     });
 
-    function toggleRates() {
-        showFullRates = !showFullRates;
-    }
+
 </script>
 
 <svelte:head>
@@ -83,7 +80,7 @@
                 <div class="hidden md:flex space-x-8">
                     <button on:click={() => onNavigate('personal')} class="text-white font-bold border-b-2 border-jumia-orange bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => onNavigate('business')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Professionnel (B2C)</button>
-                    <a href="#tarifs" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Tarifs</a>
+                    <button on:click={() => onNavigate('rates')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent p-0">Tarifs</button>
                     <a href="#points-relais" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Points Relais</a>
                 </div>
                 <div class="flex items-center md:hidden">
@@ -111,7 +108,7 @@
                 <div class="flex flex-col space-y-3">
                     <button on:click={() => handleMobileNavigate('personal')} class="text-left text-white font-bold py-2 bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => handleMobileNavigate('business')} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Professionnel (B2C)</button>
-                    <a href="#tarifs" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Tarifs</a>
+                    <button on:click={() => { onNavigate('rates'); showMobileMenu = false; }} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Tarifs</button>
                     <a href="#points-relais" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Points Relais</a>
                 </div>
                 <a href="https://packagetracker-services.jumia.com/#/" target="_blank" rel="noopener noreferrer" class="w-full bg-jumia-orange text-white px-5 py-3 rounded shadow font-bold text-center block">
@@ -348,7 +345,7 @@
                             </tbody>
                         </table>
                         <div class="mt-4 pt-4 border-t border-gray-100 text-center">
-                            <button on:click|preventDefault={toggleRates} class="text-jumia-orange font-bold text-sm hover:underline cursor-pointer bg-transparent border-none p-0">Voir la grille tarifaire complète →</button>
+                            <button on:click={() => onNavigate('rates')} class="inline-block mt-8 text-jumia-orange font-bold hover:underline bg-transparent p-0">Voir la grille tarifaire complète →</button>
                         </div>
                     </div>
                 </div>
@@ -550,61 +547,7 @@
     </div>
 </div>
 
-{#if showFullRates}
-    <div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-50 transition-opacity">
-        <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
-            <div class="flex justify-between items-center p-6 border-b">
-                <h3 class="text-2xl font-bold text-gray-900">Grille Tarifaire Complète</h3>
-                <button on:click={toggleRates} class="text-gray-400 hover:text-gray-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-            </div>
-            <div class="flex-1 overflow-y-auto custom-scrollbar">
-                <table class="w-full text-sm text-left">
-                    <thead class="text-xs text-gray-500 uppercase border-b bg-gray-50 sticky top-0 z-10">
-                        <tr>
-                            <th class="py-3 px-4">Départ</th>
-                            <th class="py-3 px-4">Arrivée</th>
-                            <th class="py-3 px-4">Petit Colis</th>
-                            <th class="py-3 px-4">Colis Moyen</th>
-                            <th class="py-3 px-4">Grand Colis</th>
-                            <th class="py-3 px-4">Délai Estimé</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100">
-                        {#each tarifs as tarif}
-                            <tr class="hover:bg-gray-50">
-                                <td class="py-3 px-4 font-medium text-gray-900">{tarif.depart}</td>
-                                <td class="py-3 px-4 font-medium text-gray-900">{tarif.arrivee}</td>
-                                <td class="py-3 px-4 text-gray-600 font-bold text-jumia-orange">{tarif.petit} FCFA</td>
-                                <td class="py-3 px-4 text-gray-600 font-bold text-jumia-orange">{tarif.moyen} FCFA</td>
-                                <td class="py-3 px-4 text-gray-600 font-bold text-jumia-orange">{tarif.grand} FCFA</td>
-                                <td class="py-3 px-4 text-gray-500">{tarif.delai}</td>
-                            </tr>
-                        {/each}
-                    </tbody>
-                </table>
 
-                <!-- Zones & Villes List -->
-                <div class="p-8 border-t bg-gray-50">
-                    <h4 class="text-xl font-bold text-gray-900 mb-6">Zones & Localités</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {#each zoneVilles as item}
-                            <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
-                                <p class="font-bold text-jumia-orange mb-2 text-base">{item.zone}</p>
-                                <p class="text-sm text-gray-600 leading-relaxed">{item.villes}</p>
-                            </div>
-                        {/each}
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-6 border-t bg-white text-right rounded-b-lg flex-shrink-0">
-                <button on:click={toggleRates} class="bg-gray-800 text-white px-5 py-2 rounded shadow hover:bg-gray-900 transition font-bold">Fermer</button>
-            </div>
-        </div>
-    </div>
-{/if}
 
 <style>
     .jumia-orange, .text-jumia-orange { color: #F68B1E; }
