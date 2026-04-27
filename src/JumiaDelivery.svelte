@@ -81,7 +81,7 @@
                     <button on:click={() => onNavigate('personal')} class="text-white font-bold border-b-2 border-jumia-orange bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => onNavigate('business')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Professionnel (B2C)</button>
                     <button on:click={() => onNavigate('rates')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent p-0">Tarifs</button>
-                    <button on:click={() => onNavigate('agencies')} class="text-gray-300 hover:text-jumia-orange transition flex items-center bg-transparent p-0">Points Relais</button>
+                    <a href="#points-relais" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Points Relais</a>
                 </div>
                 <div class="flex items-center md:hidden">
                     <button on:click={toggleMobileMenu} class="text-gray-300 hover:text-white focus:outline-none bg-transparent">
@@ -109,7 +109,7 @@
                     <button on:click={() => handleMobileNavigate('personal')} class="text-left text-white font-bold py-2 bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => handleMobileNavigate('business')} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Professionnel (B2C)</button>
                     <button on:click={() => { onNavigate('rates'); showMobileMenu = false; }} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Tarifs</button>
-                    <button on:click={() => { onNavigate('agencies'); showMobileMenu = false; }} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Points Relais</button>
+                    <a href="#points-relais" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Points Relais</a>
                 </div>
                 <a href="https://packagetracker-services.jumia.com/#/" target="_blank" rel="noopener noreferrer" class="w-full bg-jumia-orange text-white px-5 py-3 rounded shadow font-bold text-center block">
                     Suivre un Colis
@@ -353,19 +353,33 @@
         </div>
     </div>
 
-    <!-- Stations / Network CTA -->
-    <div class="bg-gray-50 py-16">
+    <!-- Stations / Network -->
+    <div id="points-relais" class="bg-gray-50 py-16 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Points Relais & Zones d'Expédition</h2>
-            <p class="text-gray-500 max-w-2xl mx-auto mb-10">Avec plus de 123 Points Relais à travers la Côte d'Ivoire, trouvez l'agence la plus proche pour vos expéditions.</p>
+            <p class="text-gray-500 max-w-2xl mx-auto mb-10">Avec plus de 123 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
             
-            <button 
-                on:click={() => onNavigate('agencies')} 
-                class="inline-flex items-center gap-2 px-8 py-4 bg-jumia-orange text-white rounded-xl font-bold shadow-lg hover:bg-orange-600 transition"
-            >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                Ouvrir la Carte Interactive des Agences
-            </button>
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Abidjan</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Yamoussoukro</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Bouaké</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">San Pedro</span>
+                <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">+100 Autres Villes</span>
+            </div>
+
+            <div class="bg-white p-1 rounded-2xl shadow-2xl w-full max-w-6xl h-[600px] mx-auto relative overflow-hidden border border-gray-100 text-left">
+                <!-- Interactive Leaflet Map -->
+                <Map />
+            </div>
+            
+            <div class="mt-8">
+                <button 
+                    on:click={() => onNavigate('agencies')} 
+                    class="text-jumia-orange font-bold hover:underline bg-transparent"
+                >
+                    Ouvrir en plein écran →
+                </button>
+            </div>
         </div>
     </div>
 
@@ -533,9 +547,9 @@
                 <span class="block">Prêt à envoyer un colis ?</span>
                 <span class="block text-orange-900 text-2xl mt-2 opacity-80">Trouvez un point relais près de chez vous aujourd'hui.</span>
             </h2>
-            <button on:click={() => onNavigate('agencies')} class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-jumia-orange bg-white hover:bg-gray-50 sm:w-auto">
+            <a href="#points-relais" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-jumia-orange bg-white hover:bg-gray-50 sm:w-auto">
                 Localiser un Point Relais
-            </button>
+            </a>
         </div>
     </div>
 </div>
