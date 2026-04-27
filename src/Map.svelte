@@ -7,6 +7,9 @@
     let mapElement;
     let map;
     let stations = [];
+    let searchTerm = "";
+    let selectedStation = null;
+    let markers = new Map();
     let expandedRegions = new Set();
 
     function toggleRegion(region) {
