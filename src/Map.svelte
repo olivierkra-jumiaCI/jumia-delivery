@@ -62,12 +62,21 @@
     }
 
     onMount(() => {
-        // Fix for default Leaflet markers in Vite/Vercel
-        delete L.Icon.Default.prototype._getIconUrl;
-        L.Icon.Default.mergeOptions({
-            iconRetinaUrl: markerIcon2x,
-            iconUrl: markerIcon,
-            shadowUrl: markerShadow,
+        // Define custom orange SVG icon
+        const orangeIcon = L.divIcon({
+            className: 'custom-orange-marker',
+            html: `
+                <div class="marker-container">
+                    <svg width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 0C6.71573 0 0 6.71573 0 15C0 26.25 15 40 15 40C15 40 30 26.25 30 15C30 6.71573 23.2843 0 15 0Z" fill="#F68B1E"/>
+                        <circle cx="15" cy="15" r="6" fill="white"/>
+                        <circle cx="15" cy="15" r="3" fill="#F68B1E"/>
+                    </svg>
+                </div>
+            `,
+            iconSize: [30, 40],
+            iconAnchor: [15, 40],
+            popupAnchor: [0, -35]
         });
 
         map = L.map(mapElement).setView([7.54, -5.55], 7);
@@ -87,7 +96,7 @@
                     const lng = parseFloat(parts[1].replace(/['"]/g, '').trim());
                     
                     if (!isNaN(lat) && !isNaN(lng)) {
-                        const marker = L.marker([lat, lng]).addTo(map);
+                        const marker = L.marker([lat, lng], { icon: orangeIcon }).addTo(map);
                         const popupContent = `
                             <div class="p-2">
                                 <h4 class="font-bold text-jumia-orange">${station.pus}</h4>
