@@ -210,6 +210,21 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="mt-6">
+                    <a 
+                        href="https://www.google.com/maps/search/?api=1&query={selectedStation.longlat?.replace(/['\"]/g, '').trim()}" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="w-full flex items-center justify-center gap-2 py-3 bg-gray-900 text-white rounded-xl text-xs font-bold hover:bg-black transition shadow-lg"
+                    >
+                        <svg class="w-4 h-4 text-jumia-orange" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        Ouvrir sur Google Maps
+                    </a>
+                </div>
+            </div>
             </div>
         {/if}
     </div>
