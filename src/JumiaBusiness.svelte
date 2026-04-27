@@ -85,9 +85,9 @@
     <!-- Navigation -->
     <nav class="bg-gray-900 shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
+            <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2">
-                    <img src={logo} alt="Jumia Logo" class="h-12 w-auto">
+                    <img src={logo} alt="Jumia Logo" style="width: 150px; height: 80px !important; object-fit: contain;">
                     <span class="text-white font-medium text-lg border-l border-gray-700 pl-2 ml-2">Espace vendeur</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
