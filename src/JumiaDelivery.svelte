@@ -550,8 +550,6 @@
     </div>
 </div>
 
-</div>
-
 {#if showFullRates}
     <div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-50 transition-opacity">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
