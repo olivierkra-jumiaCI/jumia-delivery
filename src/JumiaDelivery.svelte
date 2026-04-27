@@ -83,8 +83,8 @@
                 <div class="hidden md:flex space-x-8">
                     <button on:click={() => onNavigate('personal')} class="text-white font-bold border-b-2 border-jumia-orange bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => onNavigate('business')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Professionnel (B2C)</button>
-                    <a href="#rates" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Tarifs</a>
-                    <a href="#stations" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Points Relais</a>
+                    <a href="#tarifs" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Tarifs</a>
+                    <a href="#points-relais" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Points Relais</a>
                 </div>
                 <div class="flex items-center md:hidden">
                     <button on:click={toggleMobileMenu} class="text-gray-300 hover:text-white focus:outline-none bg-transparent">
@@ -111,8 +111,8 @@
                 <div class="flex flex-col space-y-3">
                     <button on:click={() => handleMobileNavigate('personal')} class="text-left text-white font-bold py-2 bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => handleMobileNavigate('business')} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Professionnel (B2C)</button>
-                    <a href="#rates" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Tarifs</a>
-                    <a href="#stations" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Points Relais</a>
+                    <a href="#tarifs" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Tarifs</a>
+                    <a href="#points-relais" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Points Relais</a>
                 </div>
                 <button class="w-full bg-jumia-orange text-white px-5 py-3 rounded shadow font-bold text-center">
                     Suivre un Colis
@@ -272,7 +272,7 @@
     </div>
 
     <!-- Pricing Section -->
-    <div id="rates" class="py-16 bg-white">
+    <div id="tarifs" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-gray-900 text-center mb-10">Tarification Transparente</h2>
             
@@ -357,9 +357,9 @@
     </div>
 
     <!-- Stations / Network -->
-    <div id="stations" class="bg-gray-50 py-16">
+    <div id="points-relais" class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Nous Sommes Partout Où Vous Êtes</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Points Relais & Zones d'Expédition</h2>
             <p class="text-gray-500 max-w-2xl mx-auto mb-10">Avec plus de 283 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
             
             <div class="flex flex-wrap justify-center gap-3 mb-10">
