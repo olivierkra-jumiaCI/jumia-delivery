@@ -98,9 +98,9 @@
                     </button>
                 </div>
                 <div class="hidden md:flex items-center">
-                    <button class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold">
+                    <a href="https://packagetracker-services.jumia.com/#/" target="_blank" rel="noopener noreferrer" class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold block text-center">
                         Suivre un Colis
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -114,9 +114,9 @@
                     <a href="#tarifs" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Tarifs</a>
                     <a href="#points-relais" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Points Relais</a>
                 </div>
-                <button class="w-full bg-jumia-orange text-white px-5 py-3 rounded shadow font-bold text-center">
+                <a href="https://packagetracker-services.jumia.com/#/" target="_blank" rel="noopener noreferrer" class="w-full bg-jumia-orange text-white px-5 py-3 rounded shadow font-bold text-center block">
                     Suivre un Colis
-                </button>
+                </a>
             </div>
         {/if}
     </nav>
