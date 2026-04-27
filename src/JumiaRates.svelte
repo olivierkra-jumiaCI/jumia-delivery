@@ -53,7 +53,7 @@
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2 cursor-pointer" on:click={() => onNavigate('personal')}>
                     <img src={logo} alt="Jumia Logo" style="width: 150px; height: 80px !important; object-fit: contain;">
-                    <span class="text-white font-medium text-lg border-l border-gray-700 pl-2 ml-2">Rate Card</span>
+                    <span class="text-white font-medium text-lg border-l border-gray-700 pl-2 ml-2">Tableau des tarifs</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <button on:click={() => onNavigate('personal')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Particuliers (C2C)</button>
@@ -71,7 +71,7 @@
 
     <!-- Orange Header -->
     <div class="bg-jumia-orange py-16 px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Complete Rate Card</h1>
+        <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Tableau des tarifs</h1>
         <p class="text-white/90 text-lg max-w-2xl mx-auto">
             Tarification transparente pour toutes les routes de livraison à travers la Côte d'Ivoire. Trouvez le coût exact de votre expédition.
         </p>
@@ -88,14 +88,14 @@
                     class="px-6 py-2.5 rounded-lg text-sm font-bold transition flex items-center gap-2 {activeTab === 'prices' ? 'bg-gray-900 text-white shadow-md' : 'text-gray-500 hover:text-gray-700'}"
                 >
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    Price List
+                    Liste de prix
                 </button>
                 <button 
                     on:click={() => activeTab = 'zones'}
                     class="px-6 py-2.5 rounded-lg text-sm font-bold transition flex items-center gap-2 {activeTab === 'zones' ? 'bg-gray-900 text-white shadow-md' : 'text-gray-500 hover:text-gray-700'}"
                 >
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    Delivery Zones
+                    Zones de livraisons
                 </button>
             </div>
         </div>
@@ -103,14 +103,14 @@
         {#if activeTab === 'prices'}
             <!-- Package Size Guide -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-10">
-                <h2 class="text-xl font-bold text-gray-900 mb-6">Package Size Guide</h2>
+                <h2 class="text-xl font-bold text-gray-900 mb-6">Guide des tailles de colis</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Small -->
                     <div class="bg-orange-50/50 p-6 rounded-xl border border-orange-100">
                         <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 text-jumia-orange">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1a1 1 0 112 0v1a1 1 0 11-2 0zM13.536 14.95a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM15.657 15.657l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM10 11a1 1 0 100-2 1 1 0 000 2z"></path></svg>
                         </div>
-                        <h3 class="font-bold text-gray-900 mb-1">Small Package</h3>
+                        <h3 class="font-bold text-gray-900 mb-1">Petit colis</h3>
                         <p class="text-xs text-gray-500 mb-3">0-5kg</p>
                         <p class="text-[10px] text-gray-600"><strong>Dimensions:</strong> 40x20x13 cm</p>
                         <p class="text-[10px] text-gray-600 mt-1"><strong>Exemples:</strong> Téléphones, vêtements, documents.</p>
@@ -120,7 +120,7 @@
                         <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4 text-gray-600">
                              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
                         </div>
-                        <h3 class="font-bold text-gray-900 mb-1">Medium Package</h3>
+                        <h3 class="font-bold text-gray-900 mb-1">Moyen colis</h3>
                         <p class="text-xs text-gray-500 mb-3">5-15kg</p>
                         <p class="text-[10px] text-gray-600"><strong>Dimensions:</strong> 70x30x20 cm</p>
                         <p class="text-[10px] text-gray-600 mt-1"><strong>Exemples:</strong> Mixeurs, chaussures, ordinateurs.</p>
@@ -130,7 +130,7 @@
                         <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mb-4 text-gray-600">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4zM8 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1H9a1 1 0 01-1-1V4zM15 3a1 1 0 00-1 1v12a1 1 0 001 1h2a1 1 0 001-1V4a1 1 0 00-1-1h-2z"></path></svg>
                         </div>
-                        <h3 class="font-bold text-gray-900 mb-1">Large Appliances</h3>
+                        <h3 class="font-bold text-gray-900 mb-1">Grand colis</h3>
                         <p class="text-xs text-gray-500 mb-3">15-30kg+</p>
                         <p class="text-[10px] text-gray-600"><strong>Dimensions:</strong> 100x100x62 cm</p>
                         <p class="text-[10px] text-gray-600 mt-1"><strong>Exemples:</strong> TV, Meubles, Gros Electroménagers.</p>
@@ -140,7 +140,7 @@
 
             <!-- Search Routes -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-6">
-                <h2 class="text-xl font-bold text-gray-900 mb-6">Search Routes</h2>
+                <h2 class="text-xl font-bold text-gray-900 mb-6">Recherche d'itinéraires</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
@@ -149,7 +149,7 @@
                         <input 
                             type="text" 
                             bind:value={departureSearch}
-                            placeholder="Search departure zone..." 
+                            placeholder="Recherche zone de départ..." 
                             class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:border-jumia-orange focus:ring-0 transition"
                         />
                     </div>
@@ -160,7 +160,7 @@
                         <input 
                             type="text" 
                             bind:value={arrivalSearch}
-                            placeholder="Search arrival zone..." 
+                            placeholder="Recherche zone d'arrivée..." 
                             class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:border-jumia-orange focus:ring-0 transition"
                         />
                     </div>
@@ -191,12 +191,12 @@
                     <table class="w-full text-sm text-left">
                         <thead>
                             <tr class="bg-jumia-orange text-white text-xs uppercase font-black">
-                                <th class="py-5 px-6">Departure</th>
-                                <th class="py-5 px-6">Arrival</th>
-                                <th class="py-5 px-6">Small Package</th>
-                                <th class="py-5 px-6">Medium Package</th>
-                                <th class="py-5 px-6">Large Appliances</th>
-                                <th class="py-5 px-6">Delivery Time</th>
+                                <th class="py-5 px-6">Départ</th>
+                                <th class="py-5 px-6">Arrivée</th>
+                                <th class="py-5 px-6">Petit colis</th>
+                                <th class="py-5 px-6">Moyen colis</th>
+                                <th class="py-5 px-6">Grand colis</th>
+                                <th class="py-5 px-6">délai de livraison ( estimé en jours ouvés)</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-100">
