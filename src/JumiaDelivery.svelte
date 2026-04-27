@@ -232,7 +232,7 @@
                         <img src={step4} alt="Suivi" class="w-full h-full object-contain">
                     </div>
                     <p class="text-gray-700 text-lg leading-relaxed">
-                        <span class="font-black text-2xl text-gray-900 mr-2">4-</span> Suivre en temps réel la localisation de votre colis grâce à notre <span class="text-jumia-orange font-bold">Application de suivi.</span>
+                        <span class="font-black text-2xl text-gray-900 mr-2">4-</span> Suivre en temps réel la localisation de votre colis grâce à notre <a href="https://packagetracker-services.jumia.com/#/" target="_blank" rel="noopener noreferrer" class="text-jumia-orange font-bold hover:underline">Application de suivi.</a>
                     </p>
                 </div>
             </div>
