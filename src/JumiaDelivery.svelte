@@ -66,7 +66,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-2">
-                    <img src={logo} alt="Jumia Logo" class="h-8 w-auto">
+                    <img src={logo} alt="Jumia Logo" class="h-12 w-auto">
                     <span class="text-white font-medium text-lg border-l border-gray-700 pl-2 ml-2">Livraison</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
