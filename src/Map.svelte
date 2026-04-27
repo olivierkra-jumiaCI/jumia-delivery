@@ -59,11 +59,12 @@
     }
 
     onMount(() => {
-        delete L.Icon.Default.prototype._getIconUrl;
-        L.Icon.Default.mergeOptions({
-            iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-            iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker.png',
-            shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+        // Define custom Jumia icon
+        const jumiaIcon = L.icon({
+            iconUrl: '/marker-orange.png',
+            iconSize: [32, 42],
+            iconAnchor: [16, 42],
+            popupAnchor: [0, -40]
         });
 
         map = L.map(mapElement).setView([7.54, -5.55], 7);
@@ -83,7 +84,7 @@
                     const lng = parseFloat(parts[1].replace(/['"]/g, '').trim());
                     
                     if (!isNaN(lat) && !isNaN(lng)) {
-                        const marker = L.marker([lat, lng]).addTo(map);
+                        const marker = L.marker([lat, lng], { icon: jumiaIcon }).addTo(map);
                         const popupContent = `
                             <div class="p-2">
                                 <h4 class="font-bold text-jumia-orange">${station.pus}</h4>
