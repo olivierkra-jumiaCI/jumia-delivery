@@ -272,7 +272,7 @@
     </div>
 
     <!-- Pricing Section -->
-    <div id="tarifs" class="py-16 bg-white">
+    <div id="tarifs" class="py-16 bg-white scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-gray-900 text-center mb-10">Tarification Transparente</h2>
             
@@ -357,7 +357,7 @@
     </div>
 
     <!-- Stations / Network -->
-    <div id="points-relais" class="bg-gray-50 py-16">
+    <div id="points-relais" class="bg-gray-50 py-16 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Points Relais & Zones d'Expédition</h2>
             <p class="text-gray-500 max-w-2xl mx-auto mb-10">Avec plus de 283 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
