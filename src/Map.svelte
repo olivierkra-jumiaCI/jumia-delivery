@@ -3,6 +3,7 @@
     import 'leaflet/dist/leaflet.css';
     import L from 'leaflet';
     import Papa from 'papaparse';
+    import orangeMarker from './assets/marker-orange.png';
 
     let mapElement;
     let map;
@@ -59,12 +60,13 @@
     }
 
     onMount(() => {
-        // Define custom Jumia icon
+        // Define custom Jumia icon using the imported asset
         const jumiaIcon = L.icon({
-            iconUrl: '/marker-orange.png',
-            iconSize: [32, 42],
-            iconAnchor: [16, 42],
-            popupAnchor: [0, -40]
+            iconUrl: orangeMarker,
+            iconSize: [25, 35],
+            iconAnchor: [12, 35],
+            popupAnchor: [1, -34],
+            shadowUrl: null
         });
 
         map = L.map(mapElement).setView([7.54, -5.55], 7);
