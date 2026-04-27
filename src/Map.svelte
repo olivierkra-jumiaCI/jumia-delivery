@@ -120,7 +120,7 @@
 
 <div class="flex flex-col md:flex-row h-full bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
     <!-- Sidebar -->
-    <div class="w-full md:w-96 flex flex-col border-r border-gray-100 bg-gray-50">
+    <div class="w-full h-1/2 md:h-full md:w-96 flex flex-col border-r border-gray-100 bg-gray-50">
         <div class="p-5 bg-white border-b border-gray-100">
             <div class="relative group">
                 <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400 group-focus-within:text-jumia-orange transition">
@@ -177,7 +177,7 @@
     </div>
 
     <!-- Map -->
-    <div class="flex-1 relative">
+    <div class="flex-1 h-1/2 md:h-full relative">
         <div bind:this={mapElement} class="h-full w-full z-10"></div>
         
         {#if selectedStation}
