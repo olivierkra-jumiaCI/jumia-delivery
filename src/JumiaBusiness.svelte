@@ -326,40 +326,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">À propos de Jumia Delivery</h3>
-                <p class="text-sm leading-relaxed">Aider les entreprises à se développer grâce à une infrastructure logistique fiable à travers l'Afrique.</p>
-            </div>
-            <div>
-                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Solutions Business</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">Grille Tarifaire</a></li>
-                    <li><a href="#" class="hover:text-white">API Docs</a></li>
-                    <li><a href="#" class="hover:text-white">Outil d'expédition en masse</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Support</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">Centre d'Aide</a></li>
-                    <li><a href="#" class="hover:text-white">Contacter les Ventes</a></li>
-                    <li><a href="#" class="hover:text-white">Signaler un Problème</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Suivez-nous</h3>
-                <div class="flex space-x-4">
-                   <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
-                   <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
-                   <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
-                </div>
-                <p class="text-xs mt-4">© 2025 Jumia. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+
 </div>
 
 <style>

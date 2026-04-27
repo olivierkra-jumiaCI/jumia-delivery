@@ -467,40 +467,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">À propos de Jumia Delivery</h3>
-                <p class="text-sm leading-relaxed">Le premier service de courrier de Côte d'Ivoire. Logistique rapide, fiable et abordable pour tous.</p>
-            </div>
-            <div>
-                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Aide</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">Centre d'Aide</a></li>
-                    <li><a href="#" class="hover:text-white">Nous Contacter</a></li>
-                    <li><a href="#" class="hover:text-white">Résolution des Litiges</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Légal</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">Conditions Générales</a></li>
-                    <li><a href="#" class="hover:text-white">Avis de Confidentialité</a></li>
-                    <li><a href="#" class="hover:text-white">Avis sur les Cookies</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Suivez-nous</h3>
-                <div class="flex space-x-4">
-                   <!-- Social Icons Placeholder -->
-                   <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
-                   <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
-                   <div class="w-8 h-8 bg-gray-700 rounded-full"></div>
-                </div>
-                <p class="text-xs mt-4">© 2025 Jumia. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+
 </div>
 
 {#if showFullRates}
