@@ -91,14 +91,13 @@
                     <span class="text-white font-medium text-lg border-l border-gray-700 pl-2 ml-2">Espace vendeur</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <button on:click={() => onNavigate('personal')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Personnel (C2C)</button>
+                    <button on:click={() => onNavigate('personal')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => onNavigate('business')} class="text-white font-bold border-b-2 border-jumia-orange bg-transparent">Professionnel (B2C)</button>
                     <a href="#features" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Fonctionnalités</a>
                     <a href="#stations" class="text-gray-300 hover:text-jumia-orange transition flex items-center">Nos agences</a>
                 </div>
                 <div class="flex items-center md:hidden">
                     <button on:click={toggleMobileMenu} class="text-gray-300 hover:text-white focus:outline-none bg-transparent flex items-center gap-2 px-2 py-1 rounded border border-gray-700">
-                        <span class="text-xs font-bold uppercase tracking-widest">Menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             {#if showMobileMenu}
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -120,7 +119,7 @@
         {#if showMobileMenu}
             <div class="md:hidden bg-gray-800 border-t border-gray-700 py-4 px-4 space-y-4 animate-fadeIn">
                 <div class="flex flex-col space-y-3">
-                    <button on:click={() => handleMobileNavigate('personal')} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Personnel (C2C)</button>
+                    <button on:click={() => handleMobileNavigate('personal')} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Particuliers (C2C)</button>
                     <button on:click={() => handleMobileNavigate('business')} class="text-left text-white font-bold py-2 bg-transparent">Professionnel (B2C)</button>
                     <a href="#features" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Fonctionnalités</a>
                     <a href="#stations" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Nos agences</a>
