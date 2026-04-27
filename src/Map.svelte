@@ -3,7 +3,9 @@
     import 'leaflet/dist/leaflet.css';
     import L from 'leaflet';
     import Papa from 'papaparse';
-    import orangeMarker from './assets/marker-orange.png';
+    import markerIcon from 'leaflet/dist/images/marker-icon.png';
+    import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
+    import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
     let mapElement;
     let map;
@@ -60,13 +62,12 @@
     }
 
     onMount(() => {
-        // Define custom Jumia icon using the imported asset
-        const jumiaIcon = L.icon({
-            iconUrl: orangeMarker,
-            iconSize: [25, 35],
-            iconAnchor: [12, 35],
-            popupAnchor: [1, -34],
-            shadowUrl: null
+        // Fix for default Leaflet markers in Vite/Vercel
+        delete L.Icon.Default.prototype._getIconUrl;
+        L.Icon.Default.mergeOptions({
+            iconRetinaUrl: markerIcon2x,
+            iconUrl: markerIcon,
+            shadowUrl: markerShadow,
         });
 
         map = L.map(mapElement).setView([7.54, -5.55], 7);
@@ -86,7 +87,7 @@
                     const lng = parseFloat(parts[1].replace(/['"]/g, '').trim());
                     
                     if (!isNaN(lat) && !isNaN(lng)) {
-                        const marker = L.marker([lat, lng], { icon: jumiaIcon }).addTo(map);
+                        const marker = L.marker([lat, lng]).addTo(map);
                         const popupContent = `
                             <div class="p-2">
                                 <h4 class="font-bold text-jumia-orange">${station.pus}</h4>
