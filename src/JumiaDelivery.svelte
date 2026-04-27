@@ -15,6 +15,10 @@
     import heroImage from './assets/hero.jpg';
     import logo from './assets/logo.png';
     import Papa from 'papaparse';
+    import step1 from './assets/step-1.png';
+    import step2 from './assets/step-2.png';
+    import step3 from './assets/step-3.png';
+    import step4 from './assets/step-4.png';
 
     let showFullRates = false;
     let tarifs = [];
@@ -192,8 +196,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 border border-gray-100 rounded-3xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-gray-100">
                 <!-- Step 1 -->
                 <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition">
-                    <div class="w-24 h-24 flex-shrink-0 bg-orange-50 rounded-full flex items-center justify-center overflow-hidden">
-                        <img src="/icons.svg#shop" alt="Point Relais" class="w-16 h-16 object-contain">
+                    <div class="w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                        <img src={step1} alt="Point Relais" class="w-full h-full object-contain">
                     </div>
                     <p class="text-gray-700 text-lg leading-relaxed">
                         <span class="font-black text-2xl text-gray-900 mr-2">1-</span> Se rendre dans le point relais JUMIA le plus proche. (Plus de 191 agences dans plus de 123 villes).
@@ -202,8 +206,8 @@
 
                 <!-- Step 2 -->
                 <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition">
-                    <div class="w-24 h-24 flex-shrink-0 bg-orange-50 rounded-full flex items-center justify-center overflow-hidden">
-                        <img src="/icons.svg#package" alt="Colis" class="w-16 h-16 object-contain">
+                    <div class="w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                        <img src={step2} alt="Colis" class="w-full h-full object-contain">
                     </div>
                     <p class="text-gray-700 text-lg leading-relaxed">
                         <span class="font-black text-2xl text-gray-900 mr-2">2-</span> Faire enregistrer son colis et régler les frais d'expédition auprès de l'agent en point relais Jumia.
@@ -212,8 +216,8 @@
 
                 <!-- Step 3 -->
                 <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition border-t border-gray-100 md:border-t-0">
-                    <div class="w-24 h-24 flex-shrink-0 bg-orange-50 rounded-full flex items-center justify-center overflow-hidden">
-                        <img src="/icons.svg#alerts" alt="Alertes" class="w-16 h-16 object-contain">
+                    <div class="w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                        <img src={step3} alt="Alertes" class="w-full h-full object-contain">
                     </div>
                     <p class="text-gray-700 text-lg leading-relaxed">
                         <span class="font-black text-2xl text-gray-900 mr-2">3-</span> Les informations d'expéditions sont automatiquement transmises par sms et ou e-mail aux expéditeur et destinataire.
@@ -222,8 +226,8 @@
 
                 <!-- Step 4 -->
                 <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition border-t border-gray-100">
-                    <div class="w-24 h-24 flex-shrink-0 bg-orange-50 rounded-full flex items-center justify-center overflow-hidden">
-                        <img src="/icons.svg#tracking" alt="Suivi" class="w-16 h-16 object-contain">
+                    <div class="w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                        <img src={step4} alt="Suivi" class="w-full h-full object-contain">
                     </div>
                     <p class="text-gray-700 text-lg leading-relaxed">
                         <span class="font-black text-2xl text-gray-900 mr-2">4-</span> Suivre en temps réel la localisation de votre colis grâce à notre <span class="text-jumia-orange font-bold">Application de suivi.</span>
