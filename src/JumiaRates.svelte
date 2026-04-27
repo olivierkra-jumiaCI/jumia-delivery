@@ -53,7 +53,7 @@
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2 cursor-pointer" on:click={() => onNavigate('personal')}>
                     <img src={logo} alt="Jumia Logo" style="width: 150px; height: 80px !important; object-fit: contain;">
-                    <span class="text-white font-medium text-lg border-l border-gray-700 pl-2 ml-2">Tableau des tarifs</span>
+                    <span class="text-white font-medium text-lg border-l border-gray-700 pl-2 ml-2">Zone et frais de livraison</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <button on:click={() => onNavigate('personal')} class="text-gray-300 hover:text-jumia-orange transition bg-transparent">Particuliers (C2C)</button>
