@@ -95,9 +95,6 @@
                     </button>
                 </div>
                 <div class="hidden md:flex items-center">
-                    <a href="https://packagetracker-services.jumia.com/#/" target="_blank" rel="noopener noreferrer" class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold block text-center">
-                        Suivre un Colis
-                    </a>
                 </div>
             </div>
         </div>
@@ -111,9 +108,6 @@
                     <button on:click={() => { onNavigate('rates'); showMobileMenu = false; }} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Tarifs</button>
                     <a href="#points-relais" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Points Relais</a>
                 </div>
-                <a href="https://packagetracker-services.jumia.com/#/" target="_blank" rel="noopener noreferrer" class="w-full bg-jumia-orange text-white px-5 py-3 rounded shadow font-bold text-center block">
-                    Suivre un Colis
-                </a>
             </div>
         {/if}
     </nav>
@@ -213,7 +207,7 @@
                         <img src={step1} alt="Point Relais" class="w-full h-full object-contain">
                     </div>
                     <p class="text-gray-700 text-lg leading-relaxed">
-                        <span class="font-black text-2xl text-gray-900 mr-2">1-</span> Se rendre dans le point relais JUMIA le plus proche. (Plus de 191 agences dans plus de 123 villes).
+                        <span class="font-black text-2xl text-gray-900 mr-2">1-</span> Se rendre dans le point relais JUMIA le plus proche. (Plus de 231 Points Relais dans plus de 123 villes).
                     </p>
                 </div>
 
@@ -357,7 +351,7 @@
     <div id="points-relais" class="bg-gray-50 py-16 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Points Relais & Zones d'Expédition</h2>
-            <p class="text-gray-500 max-w-2xl mx-auto mb-10">Avec plus de 123 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
+            <p class="text-gray-500 max-w-2xl mx-auto mb-10">Plus de 231 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
             
             <div class="flex flex-wrap justify-center gap-3 mb-10">
                 <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Abidjan</span>

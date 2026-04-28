@@ -152,7 +152,9 @@
                         <span class="block text-jumia-orange">avec une logistique fiable.</span>
                     </h1>
                     <p class="mt-4 text-lg text-gray-300">
-                        Arrêtez de vous soucier de la livraison et concentrez-vous sur vos ventes. Du **Paiement à la Livraison** aux **Expéditions en Masse**, nous fournissons l'infrastructure de confiance.
+                        Concentrez-vous sur vos ventes, Jumia Delivery s’occupe du reste.<br><br>
+                        Nous assurons vos livraisons, collectons les paiements auprès de vos clients et vous permettons de suivre vos commandes et vos encaissements en toute simplicité, depuis chez vous.<br><br>
+                        Simplifiez votre logistique avec Jumia Delivery : contactez-nous dès maintenant.
                     </p>
                     
                     <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -167,6 +169,10 @@
                         <div class="flex items-center gap-2 text-gray-300 text-sm font-medium">
                             <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             <span>Suivi en Temps Réel</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300 text-sm font-medium">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Collecte de cash à la livraison</span>
                         </div>
                     </div>
                 </div>
@@ -245,10 +251,10 @@
             <div class="text-center">
                 <h2 class="text-base font-semibold text-jumia-orange tracking-wide uppercase">Pourquoi Jumia Delivery ?</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Conçu pour le commerce moderne
+                    Boostez votre activité avec Jumia Delivery.
                 </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-                    Que vous vendiez sur Instagram, ayez votre propre site ou gériez une grande entreprise, nos outils sont conçus pour vous aider à grandir.
+                <p class="mt-4 max-w-3xl text-xl text-gray-500 mx-auto">
+                    Réseaux sociaux, sites e-commerce, PME ou grande entreprise : peu importe votre canal de vente, nos solutions s’adaptent à vos besoins pour accélérer vos ventes et simplifier votre logistique.
                 </p>
             </div>
 
@@ -318,7 +324,7 @@
     <div id="points-relais" class="bg-gray-50 py-16 border-t border-gray-100 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Points Relais & Zones d'Expédition</h2>
-            <p class="text-gray-500 max-w-2xl mx-auto mb-10">Avec plus de 123 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
+            <p class="text-gray-500 max-w-2xl mx-auto mb-10">Plus de 231 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
             
             <div class="flex flex-wrap justify-center gap-3 mb-10">
                 <span class="px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-600 text-sm">Abidjan</span>
@@ -341,11 +347,11 @@
             <h2 class="text-3xl font-bold text-gray-900 mb-12">Fait confiance par plus de 10 000 entreprises</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
-                    <div class="text-4xl font-black text-jumia-orange mb-2">283+</div>
+                    <div class="text-4xl font-black text-jumia-orange mb-2">231+</div>
                     <div class="text-gray-600 font-medium">Points Relais</div>
                 </div>
                 <div>
-                    <div class="text-4xl font-black text-jumia-orange mb-2">107</div>
+                    <div class="text-4xl font-black text-jumia-orange mb-2">+123</div>
                     <div class="text-gray-600 font-medium">Villes Couvertes</div>
                 </div>
                  <div>
