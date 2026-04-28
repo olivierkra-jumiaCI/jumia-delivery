@@ -35,7 +35,7 @@
     </nav>
 
     <!-- Header Section -->
-    <div class="bg-jumia-orange py-12 px-4 text-center">
+    <div class="bg-jumia-orange py-8 px-4 text-center">
         <h1 class="text-3xl md:text-4xl font-black text-white mb-2">Nos Points Relais & Agences</h1>
         <p class="text-white/90 text-sm md:text-base max-w-2xl mx-auto">
             Trouvez l'agence Jumia la plus proche de chez vous pour déposer ou retirer vos colis en toute simplicité.

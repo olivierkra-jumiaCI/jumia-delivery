@@ -168,7 +168,7 @@
     </div>
 
     <!-- Value Props -->
-    <div class="bg-white py-12">
+    <div class="bg-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="p-6 bg-orange-50 rounded-xl border border-orange-100">
@@ -197,9 +197,9 @@
     </div>
 
     <!-- How It Works -->
-    <div class="bg-white py-20">
+    <div class="bg-white py-12">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Comment faire expédier un colis ?</h2>
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-10">Comment faire expédier un colis ?</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 border border-gray-100 rounded-3xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-gray-100">
                 <!-- Step 1 -->
                 <div class="p-8 md:p-12 flex flex-col md:flex-row items-center text-center md:text-left gap-6 md:gap-8 bg-white hover:bg-gray-50/50 transition">
@@ -263,7 +263,7 @@
     </div>
 
     <!-- Pricing Section -->
-    <div id="tarifs" class="py-16 bg-white scroll-mt-20">
+    <div id="tarifs" class="py-12 bg-white scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-gray-900 text-center mb-10">Tarification Transparente</h2>
             
@@ -348,7 +348,7 @@
     </div>
 
     <!-- Stations / Network -->
-    <div id="points-relais" class="bg-gray-50 py-16 scroll-mt-20">
+    <div id="points-relais" class="bg-gray-50 py-12 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Points Relais & Zones d'Expédition</h2>
             <p class="text-gray-500 max-w-2xl mx-auto mb-10">Plus de 231 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
@@ -378,7 +378,7 @@
     </div>
 
     <!-- Conditions & Rules Section -->
-    <div class="bg-white py-16 border-t border-gray-100">
+    <div class="bg-white py-12 border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Conditions et Règles d'Expédition</h2>
             
@@ -472,7 +472,7 @@
     </div>
 
     <!-- FAQ -->
-    <div class="max-w-3xl mx-auto px-4 py-16">
+    <div class="max-w-3xl mx-auto px-4 py-12">
         <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Foire Aux Questions</h2>
         <div class="space-y-4">
             <details class="group bg-white rounded-lg shadow-sm border border-gray-200">
@@ -536,7 +536,7 @@
 
     <!-- CTA -->
     <div class="bg-jumia-orange">
-        <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
                 <span class="block">Prêt à envoyer un colis ?</span>
                 <span class="block text-orange-900 text-2xl mt-2 opacity-80">Trouvez un point relais près de chez vous aujourd'hui.</span>

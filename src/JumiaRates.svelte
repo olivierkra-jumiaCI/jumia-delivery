@@ -70,7 +70,7 @@
     </nav>
 
     <!-- Orange Header -->
-    <div class="bg-jumia-orange py-16 px-4 text-center">
+    <div class="bg-jumia-orange py-10 px-4 text-center">
         <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Tableau des tarifs</h1>
         <p class="text-white/90 text-lg max-w-2xl mx-auto">
             Tarification transparente pour toutes les routes de livraison à travers la Côte d'Ivoire. Trouvez le coût exact de votre expédition.
@@ -78,7 +78,7 @@
     </div>
 
     <!-- Main Content Container -->
-    <div class="max-w-6xl mx-auto px-4 -mt-8 pb-20">
+    <div class="max-w-6xl mx-auto px-4 -mt-8 pb-12">
         
         <!-- Tab Switcher -->
         <div class="flex justify-center mb-8">
@@ -101,8 +101,7 @@
         </div>
 
         {#if activeTab === 'prices'}
-            <!-- Package Size Guide -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-10">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8">
                 <h2 class="text-xl font-bold text-gray-900 mb-6">Guide des tailles de colis</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Small -->
@@ -138,8 +137,7 @@
                 </div>
             </div>
 
-            <!-- Search Routes -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
                 <h2 class="text-xl font-bold text-gray-900 mb-6">Recherche d'itinéraires</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="relative">
@@ -239,7 +237,7 @@
             </div>
         {/if}
 
-        <div class="mt-20 pt-8 border-t border-gray-200 text-center text-gray-400 text-sm">
+        <div class="mt-12 pt-6 border-t border-gray-200 text-center text-gray-400 text-sm">
             <p>© {new Date().getFullYear()} Jumia Delivery Côte d'Ivoire. Tous droits réservés.</p>
         </div>
     </div>

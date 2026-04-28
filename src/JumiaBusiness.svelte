@@ -133,7 +133,7 @@
             <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900 to-transparent"></div>
         </div>
         
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
             <div class="lg:grid lg:grid-cols-12 lg:gap-8">
                 
                 <!-- Hero Copy -->
@@ -240,7 +240,7 @@
     </div>
 
     <!-- Value Proposition Grid -->
-    <div id="features" class="py-16 bg-white">
+    <div id="features" class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h2 class="text-base font-semibold text-jumia-orange tracking-wide uppercase">Pourquoi Jumia Delivery ?</h2>
@@ -315,7 +315,7 @@
     </div>
 
     <!-- Stations / Network -->
-    <div id="points-relais" class="bg-gray-50 py-16 border-t border-gray-100 scroll-mt-20">
+    <div id="points-relais" class="bg-gray-50 py-12 border-t border-gray-100 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Points Relais & Zones d'Expédition</h2>
             <p class="text-gray-500 max-w-2xl mx-auto mb-10">Plus de 231 Points Relais, déposer un colis est aussi simple que de marcher dans la rue.</p>
@@ -336,7 +336,7 @@
     </div>
 
     <!-- Stats -->
-    <div class="py-16 bg-orange-50">
+    <div class="py-12 bg-orange-50">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-12">Fait confiance par plus de 10 000 entreprises</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
