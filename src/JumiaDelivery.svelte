@@ -202,8 +202,8 @@
             <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Comment faire expédier un colis ?</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 border border-gray-100 rounded-3xl overflow-hidden shadow-sm divide-y md:divide-y-0 md:divide-x divide-gray-100">
                 <!-- Step 1 -->
-                <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition">
-                    <div class="w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                <div class="p-8 md:p-12 flex flex-col md:flex-row items-center text-center md:text-left gap-6 md:gap-8 bg-white hover:bg-gray-50/50 transition">
+                    <div class="w-32 h-32 md:w-24 md:h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
                         <img src={step1} alt="Point Relais" class="w-full h-full object-contain">
                     </div>
                     <p class="text-gray-700 text-lg leading-relaxed">
@@ -212,8 +212,8 @@
                 </div>
 
                 <!-- Step 2 -->
-                <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition">
-                    <div class="w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                <div class="p-8 md:p-12 flex flex-col md:flex-row items-center text-center md:text-left gap-6 md:gap-8 bg-white hover:bg-gray-50/50 transition">
+                    <div class="w-32 h-32 md:w-24 md:h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
                         <img src={step2} alt="Colis" class="w-full h-full object-contain">
                     </div>
                     <p class="text-gray-700 text-lg leading-relaxed">
@@ -222,8 +222,8 @@
                 </div>
 
                 <!-- Step 3 -->
-                <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition border-t border-gray-100 md:border-t-0">
-                    <div class="w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                <div class="p-8 md:p-12 flex flex-col md:flex-row items-center text-center md:text-left gap-6 md:gap-8 bg-white hover:bg-gray-50/50 transition border-t border-gray-100 md:border-t-0">
+                    <div class="w-32 h-32 md:w-24 md:h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
                         <img src={step3} alt="Alertes" class="w-full h-full object-contain">
                     </div>
                     <p class="text-gray-700 text-lg leading-relaxed">
@@ -232,8 +232,8 @@
                 </div>
 
                 <!-- Step 4 -->
-                <div class="p-8 md:p-12 flex items-center gap-8 bg-white hover:bg-gray-50/50 transition border-t border-gray-100">
-                    <div class="w-24 h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                <div class="p-8 md:p-12 flex flex-col md:flex-row items-center text-center md:text-left gap-6 md:gap-8 bg-white hover:bg-gray-50/50 transition border-t border-gray-100">
+                    <div class="w-32 h-32 md:w-24 md:h-24 flex-shrink-0 flex items-center justify-center overflow-hidden">
                         <img src={step4} alt="Suivi" class="w-full h-full object-contain">
                     </div>
                     <p class="text-gray-700 text-lg leading-relaxed">
