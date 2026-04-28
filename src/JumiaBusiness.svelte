@@ -108,9 +108,6 @@
                     </button>
                 </div>
                 <div class="hidden md:flex items-center gap-4">
-                    <button class="bg-jumia-orange text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition font-bold">
-                        Commencer
-                    </button>
                 </div>
             </div>
         </div>
@@ -124,9 +121,6 @@
                     <button on:click={() => { onNavigate('rates'); showMobileMenu = false; }} class="text-left text-gray-300 hover:text-jumia-orange py-2 bg-transparent">Tarifs</button>
                     <a href="#points-relais" on:click={() => showMobileMenu = false} class="text-gray-300 hover:text-jumia-orange py-2">Points Relais</a>
                 </div>
-                <button class="w-full bg-jumia-orange text-white px-5 py-3 rounded shadow font-bold text-center">
-                    Commencer
-                </button>
             </div>
         {/if}
     </nav>
