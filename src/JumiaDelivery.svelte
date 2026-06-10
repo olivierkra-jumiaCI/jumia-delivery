@@ -53,7 +53,7 @@
 
                 // Create a mapping of Zone -> Representative City
                 zoneVilles.forEach(item => {
-                    const firstCity = item.villes.split('-')[0].trim();
+                    const firstCity = item.villes.split(',')[0].trim();
                     zoneToCity[item.zone] = firstCity;
                 });
             }
@@ -334,11 +334,11 @@
                                     {#each tarifs.slice(0, 5) as tarif}
                                         <tr>
                                             <td class="py-3 font-medium text-gray-900">
-                                                {parseZone(tarif.depart).city}
-                                                <span class="text-xs text-gray-400 font-normal">({parseZone(tarif.depart).zone})</span>
+                                                {zoneToCity[tarif.depart] || tarif.depart}
+                                                <span class="text-xs text-gray-400 font-normal">({tarif.depart})</span>
                                                 <span class="text-gray-400 mx-1">→</span>
-                                                {parseZone(tarif.arrivee).city}
-                                                <span class="text-xs text-gray-400 font-normal">({parseZone(tarif.arrivee).zone})</span>
+                                                {zoneToCity[tarif.arrivee] || tarif.arrivee}
+                                                <span class="text-xs text-gray-400 font-normal">({tarif.arrivee})</span>
                                             </td>
                                             <td class="py-3 text-gray-500 whitespace-nowrap">{tarif.delai}</td>
                                             <td class="py-3 text-right font-bold text-jumia-orange whitespace-nowrap">{tarif.petit} FCFA</td>
