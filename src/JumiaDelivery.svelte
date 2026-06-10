@@ -321,12 +321,14 @@
                                     {#each tarifs.slice(0, 5) as tarif}
                                         <tr>
                                             <td class="py-3 font-medium text-gray-900">
-                                                {zoneToCity[tarif.depart] || ''} <span class="text-xs text-gray-400 font-normal">({tarif.depart})</span> 
-                                                <span class="text-gray-400 mx-1">→</span> 
-                                                {zoneToCity[tarif.arrivee] || ''} <span class="text-xs text-gray-400 font-normal">({tarif.arrivee})</span>
+                                                {tarif.depart.split(',')[0].trim()}
+                                                <span class="text-xs text-gray-400 font-normal">{tarif.depart.match(/\(Zone \d+\)/)?.[0] ?? ''}</span>
+                                                <span class="text-gray-400 mx-1">→</span>
+                                                {tarif.arrivee.split(',')[0].trim()}
+                                                <span class="text-xs text-gray-400 font-normal">{tarif.arrivee.match(/\(Zone \d+\)/)?.[0] ?? ''}</span>
                                             </td>
-                                            <td class="py-3 text-gray-500">{tarif.delai}</td>
-                                            <td class="py-3 text-right font-bold text-jumia-orange">{tarif.petit} FCFA</td>
+                                            <td class="py-3 text-gray-500 whitespace-nowrap">{tarif.delai}</td>
+                                            <td class="py-3 text-right font-bold text-jumia-orange whitespace-nowrap">{tarif.petit} FCFA</td>
                                         </tr>
                                     {/each}
                                 {:else}
