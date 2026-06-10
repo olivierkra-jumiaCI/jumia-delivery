@@ -274,13 +274,13 @@
     </div>
 
     <!-- Pricing Section -->
-    <div id="tarifs" class="py-12 bg-white scroll-mt-20">
+    <div id="tarifs" class="py-12 bg-white scroll-mt-20 overflow-x-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-gray-900 text-center mb-10">Tarification Transparente</h2>
             
             <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100">
                 <div class="grid grid-cols-1 md:grid-cols-2">
-                    <div class="p-8 bg-blue-50">
+                    <div class="p-8 bg-blue-50 min-w-0 overflow-hidden">
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Tailles de Colis</h3>
                         <div class="space-y-4">
                             <div class="flex items-center">
@@ -319,9 +319,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="p-8">
+                    <div class="p-8 min-w-0 overflow-hidden">
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Trajets Populaires (Petit Colis)</h3>
-                        <table class="w-full text-sm text-left">
+                        <table class="w-full text-sm text-left table-fixed">
+                            <colgroup>
+                                <col class="w-[60%]">
+                                <col class="w-[15%]">
+                                <col class="w-[25%]">
+                            </colgroup>
                             <thead class="text-xs text-gray-500 uppercase border-b">
                                 <tr>
                                     <th class="py-2">Trajet</th>
