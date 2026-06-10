@@ -60,6 +60,19 @@
         });
     });
 
+    function parseZone(str) {
+        if (!str) return { city: '', zone: '' };
+        // Extract zone label e.g. "(Zone 1)" or "Zone 1"
+        const zoneMatch = str.match(/\(Zone\s*\d+\)/i) || str.match(/(Zone\s*\d+)/i);
+        const zone = zoneMatch ? zoneMatch[0].replace(/[()]/g, '').trim() : '';
+        // Remove zone part and extract first city
+        const withoutZone = str.replace(/\(Zone\s*\d+\)/gi, '').replace(/Zone\s*\d+/gi, '');
+        const city = withoutZone.split(',')[0].replace(/[-:]/g, '').trim();
+        // Fallback to zoneToCity mapping
+        const finalCity = city || (zone ? zoneToCity[zone] : '') || str.split(',')[0].trim();
+        return { city: finalCity, zone };
+    }
+
 
 </script>
 
@@ -321,11 +334,11 @@
                                     {#each tarifs.slice(0, 5) as tarif}
                                         <tr>
                                             <td class="py-3 font-medium text-gray-900">
-                                                {tarif.depart.split(',')[0].trim()}
-                                                <span class="text-xs text-gray-400 font-normal">{tarif.depart.match(/\(Zone \d+\)/)?.[0] ?? ''}</span>
+                                                {parseZone(tarif.depart).city}
+                                                <span class="text-xs text-gray-400 font-normal">({parseZone(tarif.depart).zone})</span>
                                                 <span class="text-gray-400 mx-1">→</span>
-                                                {tarif.arrivee.split(',')[0].trim()}
-                                                <span class="text-xs text-gray-400 font-normal">{tarif.arrivee.match(/\(Zone \d+\)/)?.[0] ?? ''}</span>
+                                                {parseZone(tarif.arrivee).city}
+                                                <span class="text-xs text-gray-400 font-normal">({parseZone(tarif.arrivee).zone})</span>
                                             </td>
                                             <td class="py-3 text-gray-500 whitespace-nowrap">{tarif.delai}</td>
                                             <td class="py-3 text-right font-bold text-jumia-orange whitespace-nowrap">{tarif.petit} FCFA</td>
